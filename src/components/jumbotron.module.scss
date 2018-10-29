@@ -1,0 +1,34 @@
+@import "../utils/variables";
+
+.section {
+  height: 400px;
+  display: flex;
+  align-items: center;
+
+  :global(.container-fluid) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.jumbotron {
+  max-width: 1000px;
+
+  &-header {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: $dark-grey;
+  }
+
+  &-link {
+    color: $grey;
+    text-decoration: underline;
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+
+  &-link:hover {
+    color: darken($grey, 50%);
+  }
+}

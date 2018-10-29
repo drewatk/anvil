@@ -19,18 +19,13 @@ module.exports = {
     },
     "gatsby-plugin-offline",
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`
-      }
-    },
-    {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src"]
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    "gatsby-plugin-react-svg"
   ]
 };

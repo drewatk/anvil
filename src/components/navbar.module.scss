@@ -1,0 +1,50 @@
+@import "../utils/variables.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 40px;
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 24px;
+      padding-right: 10px;
+
+      :global(.anvil-logo-path) {
+        fill: $anvil-gold;
+      }
+    }
+
+    &-name {
+      font-size: 1.125rem;
+      margin: 0;
+      font-weight: $font-weight-semibold;
+      color: $grey;
+    }
+  }
+
+  // TODO: custom classes here
+  :global(.nav) {
+    margin-left: calc(100px - 25px);
+
+    :global(.nav-item) {
+      font-family: $headings-font-family;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    :global(.nav-link) {
+      padding-left: 25px;
+      padding-right: 25px;
+      color: $grey;
+    }
+
+    :global(.nav-link:hover) {
+      color: darken($grey, 50%); // TODO: this needs to be more visible
+    }
+  }
+}
