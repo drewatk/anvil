@@ -1,0 +1,41 @@
+@import "../utils/variables";
+
+:global(.row) {
+  height: 300px; // TODO: ask ryan about dimensions
+
+  :global(.col) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .col-left {
+    flex: 0 0 44%;
+    max-width: 44%;
+  }
+
+  .col-right {
+    flex: 0 28%;
+    max-width: 28%;
+  }
+
+  .square-header {
+    padding: 45px 60px; // TODO: ask ryan about dimensions
+    font-weight: $font-weight-normal;
+    font-size: 36px;
+  }
+
+  .yellow-square {
+    background-color: rgba($anvil-gold, 0.9);
+    color: $dark-grey-2;
+  }
+
+  .blue-square {
+    background-color: $blue;
+    color: $white;
+  }
+
+  .green-square {
+    background-color: $green;
+    color: $white;
+  }
+}
