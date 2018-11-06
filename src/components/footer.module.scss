@@ -1,0 +1,55 @@
+@import "../utils/variables";
+
+.section {
+  height: 300px;
+  background: $dark-grey;
+
+  :global(.container-fluid) {
+    padding: 0;
+  }
+}
+
+.footer {
+  height: 300px;
+  padding: 50px 80px 30px 80px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 24px;
+      padding-right: 10px;
+
+      :global(.anvil-logo-path) {
+        fill: $white;
+      }
+    }
+
+    &-name {
+      font-size: 1.125rem;
+      margin: 0;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .address {
+    }
+
+    .social-icon {
+      height: 35px;
+      width: 35px;
+
+      margin-left: 35px;
+    }
+  }
+}

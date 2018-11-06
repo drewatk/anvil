@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import Header from "./navbar";
+import Navbar from "./navbar";
+import Footer from "./footer";
 import styles from "./layout.module.scss";
 
 import "../utils/index.scss";
@@ -35,8 +36,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Navbar siteTitle={data.site.siteMetadata.title} />
         <div className={styles.container}>{children}</div>
+        <Footer />
       </>
     )}
   />
