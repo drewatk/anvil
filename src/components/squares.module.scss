@@ -3,6 +3,10 @@
 :global(.row) {
   height: 300px; // TODO: ask ryan about dimensions
 
+  a {
+    display: block;
+  }
+
   :global(.col) {
     padding-right: 0;
     padding-left: 0;
@@ -18,10 +22,25 @@
     max-width: 28%;
   }
 
-  .square-header {
-    padding: 45px 60px; // TODO: ask ryan about dimensions
-    font-weight: $font-weight-normal;
-    font-size: 36px;
+  .square {
+    display: flex;
+    justify-content: flex-end;
+
+    &-header {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 0;
+
+      padding: 45px 60px; // TODO: ask ryan about dimensions
+      font-weight: $font-weight-normal;
+      font-size: 36px;
+    }
+
+    .pattern {
+      align-self: flex-end;
+      flex-shrink: 0;
+    }
   }
 
   .yellow-square {

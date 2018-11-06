@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>pattern</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-14.0%" y="-14.0%" width="128.0%" height="128.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="-2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <g id="pattern" filter="url(#filter-1)">
+        <polygon id="Rectangle" fill="#1C313D" points="150 100 150 150 100 150"></polygon>
+        <polygon id="Rectangle" fill="#40738F" transform="translate(125.000000, 125.000000) scale(-1, -1) translate(-125.000000, -125.000000) " points="150 100 150 150 100 150"></polygon>
+        <polygon id="Rectangle" fill="#DEEAF0" points="100 50 100 100 50 100"></polygon>
+        <polygon id="Rectangle" fill="#345D74" points="150 0 150 50 100 50"></polygon>
+        <polygon id="Rectangle" fill="#2E5266" transform="translate(75.000000, 125.000000) scale(-1, 1) translate(-75.000000, -125.000000) " points="100 100 100 150 50 150"></polygon>
+        <polygon id="Rectangle" fill="#9ABED2" transform="translate(75.000000, 125.000000) scale(1, -1) translate(-75.000000, -125.000000) " points="100 100 100 150 50 150"></polygon>
+        <polygon id="Rectangle" fill="#649BB9" transform="translate(125.000000, 75.000000) scale(-1, 1) translate(-125.000000, -75.000000) " points="150 50 150 100 100 100"></polygon>
+        <polygon id="Rectangle" fill="#2E5266" transform="translate(125.000000, 75.000000) scale(1, -1) translate(-125.000000, -75.000000) " points="150 50 150 100 100 100"></polygon>
+        <polygon id="Rectangle" fill="#8DB5CB" points="50 100 50 150 0 150"></polygon>
+    </g>
+
+</svg>
