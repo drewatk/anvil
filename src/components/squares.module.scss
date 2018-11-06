@@ -2,6 +2,7 @@
 
 :global(.row) {
   height: 300px; // TODO: ask ryan about dimensions
+  margin: 0;
 
   a {
     display: block;
@@ -18,7 +19,7 @@
   }
 
   .col-right {
-    flex: 0 28%;
+    flex: 0 0 28%;
     max-width: 28%;
   }
 

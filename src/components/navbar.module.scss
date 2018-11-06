@@ -47,4 +47,42 @@
       color: darken($grey, 50%); // TODO: this needs to be more visible
     }
   }
+
+  .squares {
+    align-self: flex-start;
+    width: 60px;
+    height: 60px;
+    margin-right: -40px;
+    margin-left: auto;
+    position: relative;
+
+    .yellow-square {
+      position: absolute;
+      z-index: 0;
+      width: 60px;
+      height: 222px;
+      background: rgba($anvil-gold, 0.9);
+      opacity: 90%;
+    }
+
+    .blue-square {
+      position: absolute;
+      z-index: 1;
+      left: calc(-255px + 60px);
+      width: 255px;
+      height: 60px;
+      background: rgba($blue, 0.8);
+      opacity: 80%;
+    }
+
+    .green-square {
+      position: absolute;
+      z-index: 1;
+      left: calc(-255px + 60px - 113px);
+      width: 113px;
+      height: 60px;
+      background: rgba($green, 0.9);
+      opacity: 64%;
+    }
+  }
 }
