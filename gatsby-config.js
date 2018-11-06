@@ -3,6 +3,7 @@ module.exports = {
     title: "The Anvil",
     description: "Description"
   },
+  pathPrefix: "/anvil",
   plugins: [
     "gatsby-plugin-react-helmet",
     {

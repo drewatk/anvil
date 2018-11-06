@@ -32,7 +32,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "yarn build && surge public anvilstartupsnew.surge.sh",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "dev": "yarn develop",
     "develop": "gatsby develop",
     "prod": "yarn build && gatsby serve",
@@ -40,6 +40,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "prettier": "^1.14.2"
   },
   "repository": {
