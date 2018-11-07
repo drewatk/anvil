@@ -1,0 +1,18 @@
+/**
+ * Global CSS rules
+ * These rules are imported globally, and not included in the modules
+ * To access bootstrap mixins and variables from a *.module.scss file, import the "bootstrap-required" file
+ */
+
+// Custom variables
+@import "variables";
+
+// All Required bootstrap funcions, variables, mixins
+@import "bootstrap-required";
+
+// Optional bootstrap functionality
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/nav";

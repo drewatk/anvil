@@ -6,11 +6,12 @@ import { Location } from "@reach/router";
 
 import Navbar from "./navbar";
 import Footer from "./footer";
-import styles from "./layout.module.scss";
 
-import "../utils/index.scss";
+import "../stylesheets/index.scss";
 import "typeface-open-sans";
 import "typeface-poppins";
+
+import styles from "./layout.module.scss";
 
 const Layout = ({ children }) => (
   <StaticQuery

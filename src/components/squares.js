@@ -8,37 +8,41 @@ import PatternYellow from "../assets/pattern_Yellow.svg";
 import PatternGreen from "../assets/pattern_Green.svg";
 
 const Squares = () => (
-  <div className="continer">
-    <div className="row">
-      <div
-        className={`${styles.square} ${styles.yellowSquare} ${
-          styles.colLeft
-        } col-sm`}
-        onClick={() => navigate("/membership")}
-      >
-        <h2 className={`${styles.squareHeader} text-uppercase`}>Membership</h2>
-        <PatternYellow className={styles.pattern} />
-      </div>
+  <div className={styles.squares}>
+    <div className="container-fluid">
+      <div className="row">
+        <div
+          className={`${styles.square} ${styles.yellowSquare} ${
+            styles.colLeft
+          } col-md`}
+          onClick={() => navigate("/membership")}
+        >
+          <h2 className={`${styles.squareHeader} text-uppercase`}>
+            Membership
+          </h2>
+          <PatternYellow className={styles.pattern} />
+        </div>
 
-      <div
-        className={`${styles.square} ${styles.blueSquare} ${
-          styles.colRight
-        } col-sm`}
-        onClick={() => navigate("/events")}
-      >
-        <h2 className={`${styles.squareHeader} text-uppercase`}>Events</h2>
-        <PatternBlue className={styles.pattern} />
-      </div>
+        <div
+          className={`${styles.square} ${styles.blueSquare} ${
+            styles.colRight
+          } col-md`}
+          onClick={() => navigate("/events")}
+        >
+          <h2 className={`${styles.squareHeader} text-uppercase`}>Events</h2>
+          <PatternBlue className={styles.pattern} />
+        </div>
 
-      <div
-        className={`${styles.square} ${styles.greenSquare} ${
-          styles.colRight
-        } col-sm`}
-        onClick={() => navigate("/sponsor")}
-      >
-        <h2 className={`${styles.squareHeader} text-uppercase`}>Sponsor</h2>
+        <div
+          className={`${styles.square} ${styles.greenSquare} ${
+            styles.colRight
+          } col-md`}
+          onClick={() => navigate("/sponsor")}
+        >
+          <h2 className={`${styles.squareHeader} text-uppercase`}>Sponsor</h2>
 
-        <PatternGreen className={styles.pattern} />
+          <PatternGreen className={styles.pattern} />
+        </div>
       </div>
     </div>
   </div>

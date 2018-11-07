@@ -1,31 +1,34 @@
-@import "../utils/variables";
+@import "../stylesheets/variables";
+@import "../stylesheets/bootstrap-required";
 
 .section {
-  height: 400px;
+  height: 25rem;
   display: flex;
   align-items: center;
 
   :global(.container-fluid) {
-    padding-left: 70px; // TODO: ask ryan about dimensions
-    padding-right: 70px;
+    padding-left: 4.375rem; // TODO: ask ryan about dimensions
+    padding-right: 4.375rem;
   }
 }
 
 .jumbotron {
-  max-width: 1000px;
+  // TODO: max width
 
   &-header {
-    font-size: 48px;
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
     font-weight: 400;
-    letter-spacing: 5px;
+    letter-spacing: 0.3125rem;
     color: $dark-grey;
   }
 
   &-link {
     color: $grey;
     text-decoration: underline;
-    font-size: 25px;
-    letter-spacing: 5px;
+    font-size: 1.5625rem;
+    letter-spacing: 0.3125rem;
   }
 
   &-link:hover {

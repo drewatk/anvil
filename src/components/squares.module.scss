@@ -1,64 +1,70 @@
-@import "../utils/index";
-@import "../utils/variables";
+@import "../stylesheets/variables";
 
-:global(.row) {
-  height: 300px; // TODO: ask ryan about dimensions
-  margin: 0;
-
-  a {
-    display: block;
-  }
-
-  :global(.col) {
-    padding-right: 0;
+.squares {
+  :global(.container-fluid) {
     padding-left: 0;
-  }
+    padding-right: 0;
 
-  @include media-breakpoint-up(sm) {
-    .col-left {
-      flex: 0 0 44%;
-      max-width: 44%;
-    }
-
-    .col-right {
-      flex: 0 0 28%;
-      max-width: 28%;
-    }
-  }
-
-  .square {
-    display: flex;
-    justify-content: flex-end;
-
-    &-header {
-      position: absolute;
-      left: 0;
-      top: 0;
+    :global(.row) {
+      height: 18.75rem; // TODO: ask ryan about dimensions
       margin: 0;
 
-      padding: 45px 60px; // TODO: ask ryan about dimensions
-      font-weight: $font-weight-normal;
-      font-size: 36px;
+      a {
+        display: block;
+      }
+
+      :global(.col-md) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      @media (min-width: 768px) {
+        .col-left {
+          flex: 0 0 44%;
+          max-width: 44%;
+        }
+
+        .col-right {
+          flex: 0 0 28%;
+          max-width: 28%;
+        }
+      }
+
+      .square {
+        display: flex;
+        justify-content: flex-end;
+
+        &-header {
+          position: absolute;
+          left: 0;
+          top: 0;
+          margin: 0;
+          padding-top: 2.8125rem;
+          padding-left: 3.75rem; // TODO: ask ryan about dimensions
+          font-weight: $font-weight-normal;
+          font-size: 2.25rem;
+        }
+
+        .pattern {
+          align-self: flex-end;
+          flex-shrink: 0;
+        }
+      }
+
+      .yellow-square {
+        background-color: rgba($anvil-gold, 0.9);
+        color: $dark-grey-2;
+      }
+
+      .blue-square {
+        background-color: $blue;
+        color: $white;
+      }
+
+      .green-square {
+        background-color: $green;
+        color: $white;
+      }
     }
-
-    .pattern {
-      align-self: flex-end;
-      flex-shrink: 0;
-    }
-  }
-
-  .yellow-square {
-    background-color: rgba($anvil-gold, 0.9);
-    color: $dark-grey-2;
-  }
-
-  .blue-square {
-    background-color: $blue;
-    color: $white;
-  }
-
-  .green-square {
-    background-color: $green;
-    color: $white;
   }
 }

@@ -1,12 +1,12 @@
-@import "../utils/variables.scss";
-
-.container {
-  margin: 0 auto;
-  padding-top: 0;
-}
+@import "../stylesheets/variables";
+@import "../stylesheets/bootstrap-required";
 
 .squares {
   position: relative;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 
   .yellow-square {
     position: absolute;
