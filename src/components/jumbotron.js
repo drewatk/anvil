@@ -16,7 +16,7 @@ const Jumbotron = () => (
           to="/membership"
           className={`${styles.jumbotronLink} float-right`}
         >
-          <h3> Learn More →</h3>
+          <h3>Learn More&nbsp;→</h3>
         </Link>
       </div>
     </div>

@@ -1,4 +1,5 @@
 @import "../stylesheets/variables";
+@import "../stylesheets/bootstrap-required.scss";
 
 .squares {
   :global(.container-fluid) {
@@ -43,6 +44,10 @@
           padding-left: 3.75rem; // TODO: ask ryan about dimensions
           font-weight: $font-weight-normal;
           font-size: 2.25rem;
+          @include media-breakpoint-down(sm) {
+            font-size: 1.75rem;
+            padding-top: 3.82rem;
+          }
         }
 
         .pattern {

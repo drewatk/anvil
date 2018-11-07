@@ -9,6 +9,12 @@
   :global(.container-fluid) {
     padding-left: 4.375rem; // TODO: ask ryan about dimensions
     padding-right: 4.375rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 }
 

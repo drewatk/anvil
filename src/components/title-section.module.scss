@@ -1,4 +1,5 @@
 @import "../stylesheets/variables.scss";
+@import "../stylesheets/bootstrap-required.scss";
 
 .section {
   height: 20rem;
@@ -11,6 +12,10 @@
     font-weight: $font-weight-normal;
     font-size: 3rem;
     letter-spacing: 0.3125rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
   }
 }
 
