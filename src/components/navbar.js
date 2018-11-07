@@ -10,8 +10,8 @@ const Navbar = ({ theme }) => (
     {({ location: { pathname } }) => {
       const navbarClasses = [
         styles.navbar,
-        pathname === "/membership" ? styles.navbarGold : "",
-        pathname === "/events" ? styles.navbarBlue : ""
+        pathname.endsWith("membership") ? styles.navbarGold : "",
+        pathname.endsWith("events") ? styles.navbarBlue : ""
       ]
         .join(" ")
         .trim();

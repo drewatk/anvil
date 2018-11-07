@@ -40,7 +40,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Location>
           {({ location: { pathname } }) => {
-            return pathname === "/" ? (
+            return pathname.endsWith("/") ? (
               <div className={styles.squares}>
                 <div className={styles.yellowSquare} />
                 <div className={styles.greenSquare} />
