@@ -1,0 +1,29 @@
+@import "../stylesheets/variables.scss";
+
+.section {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+
+  .title {
+    margin: 0 auto;
+    font-family: $headings-font-family;
+    font-weight: $font-weight-normal;
+    font-size: 3rem;
+    letter-spacing: 0.3125rem;
+  }
+}
+
+.section-gold {
+  background: $anvil-gold;
+  .title {
+    color: $black;
+  }
+}
+
+.section-blue {
+  background: $blue;
+  .title {
+    color: $white;
+  }
+}

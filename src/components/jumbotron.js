@@ -12,7 +12,10 @@ const Jumbotron = () => (
           <br />
           At Purdue
         </h2>
-        <Link to="/" className={`${styles.jumbotronLink} float-right`}>
+        <Link
+          to="/membership"
+          className={`${styles.jumbotronLink} float-right`}
+        >
           <h3> Learn More →</h3>
         </Link>
       </div>

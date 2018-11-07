@@ -6,11 +6,15 @@
   height: 5rem;
   padding: 0 2.5rem;
 
+  a:hover {
+    text-decoration: none;
+  }
+
   .brand {
     display: flex;
     align-items: center;
 
-    .logo {
+    &-logo {
       height: 1.5rem;
       padding-right: 0.625rem;
 
@@ -45,6 +49,52 @@
 
     :global(.nav-link:hover) {
       color: darken($grey, 50%); // TODO: this needs to be more visible
+    }
+  }
+}
+
+.navbar-gold {
+  background: $anvil-gold;
+  .brand {
+    &-logo {
+      :global(.anvil-logo-path) {
+        fill: $black;
+      }
+    }
+    &-name {
+      color: $black;
+    }
+  }
+
+  :global(.nav) {
+    :global(.nav-link) {
+      color: $black;
+    }
+    :global(.nav-link:hover) {
+      color: $grey;
+    }
+  }
+}
+
+.navbar-blue {
+  background: $blue;
+  .brand {
+    &-logo {
+      :global(.anvil-logo-path) {
+        fill: $white;
+      }
+    }
+    &-name {
+      color: $white;
+    }
+  }
+
+  :global(.nav) {
+    :global(.nav-link) {
+      color: $white;
+    }
+    :global(.nav-link:hover) {
+      color: darken($white, 25%);
     }
   }
 }
