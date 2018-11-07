@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Nav, NavItem } from "reactstrap";
-import { Location } from "@reach/router";
 import styles from "./navbar.module.scss";
 import Logo from "../assets/anvil.svg";
 
@@ -33,17 +32,6 @@ const Navbar = ({ siteTitle }) => (
         </Link>
       </NavItem>
     </Nav>
-    <Location>
-      {({ location: { pathname } }) => {
-        return pathname === "/" ? (
-          <div className={styles.squares}>
-            <div className={styles.yellowSquare} />
-            <div className={styles.greenSquare} />
-            <div className={styles.blueSquare} />
-          </div>
-        ) : null;
-      }}
-    </Location>
   </div>
 );
 

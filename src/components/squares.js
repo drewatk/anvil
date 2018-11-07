@@ -13,7 +13,7 @@ const Squares = () => (
       <div
         className={`${styles.square} ${styles.yellowSquare} ${
           styles.colLeft
-        } col`}
+        } col-sm`}
         onClick={() => navigate("/membership")}
       >
         <h2 className={`${styles.squareHeader} text-uppercase`}>Membership</h2>
@@ -23,7 +23,7 @@ const Squares = () => (
       <div
         className={`${styles.square} ${styles.blueSquare} ${
           styles.colRight
-        } col`}
+        } col-sm`}
         onClick={() => navigate("/events")}
       >
         <h2 className={`${styles.squareHeader} text-uppercase`}>Events</h2>
@@ -33,7 +33,7 @@ const Squares = () => (
       <div
         className={`${styles.square} ${styles.greenSquare} ${
           styles.colRight
-        } col`}
+        } col-sm`}
         onClick={() => navigate("/sponsor")}
       >
         <h2 className={`${styles.squareHeader} text-uppercase`}>Sponsor</h2>
