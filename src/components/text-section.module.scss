@@ -1,0 +1,23 @@
+@import "../stylesheets/variables.scss";
+@import "../stylesheets/mixins.scss";
+
+.section {
+  min-height: 20rem;
+
+  :global(.container) {
+    padding-top: 3.125rem; // TODO: padding variable
+    padding-bottom: 3.125rem;
+    .title {
+      @include heading-type;
+    }
+
+    .subheading {
+      @include subheading-type;
+    }
+
+    :global(.col-md-4) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

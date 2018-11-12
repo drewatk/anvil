@@ -1,0 +1,25 @@
+@import "../stylesheets/bootstrap-required.scss";
+
+@mixin page-title-type {
+  font-family: $headings-font-family;
+  font-weight: $font-weight-normal;
+  font-size: 3rem;
+  letter-spacing: 0.3125rem;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 2rem;
+  }
+}
+
+@mixin heading-type {
+  font-family: $headings-font-family;
+  font-weight: $font-weight-normal;
+  font-size: 2.25rem;
+  letter-spacing: 0.3125rem;
+}
+
+@mixin subheading-type {
+  font-family: $font-family-base;
+  font-weight: $font-weight-light;
+  font-size: 1.25rem;
+}

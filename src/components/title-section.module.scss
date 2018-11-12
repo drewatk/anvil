@@ -1,6 +1,5 @@
-@import "../stylesheets/variables.scss";
-@import "../stylesheets/bootstrap-required.scss";
-
+@import "../stylesheets/variables";
+@import "../stylesheets/mixins";
 .section {
   height: 20rem;
   display: flex;
@@ -8,14 +7,7 @@
 
   .title {
     margin: 0 auto;
-    font-family: $headings-font-family;
-    font-weight: $font-weight-normal;
-    font-size: 3rem;
-    letter-spacing: 0.3125rem;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 2rem;
-    }
+    @include page-title-type;
   }
 }
 

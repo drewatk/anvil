@@ -17,7 +17,7 @@ const Squares = () => (
           } col-md`}
           onClick={() => navigate("/membership")}
         >
-          <h2 className={`${styles.squareHeader} text-uppercase`}>
+          <h2 className={`${styles.squareHeading} text-uppercase`}>
             Membership
           </h2>
           <PatternYellow className={styles.pattern} />
@@ -29,7 +29,7 @@ const Squares = () => (
           } col-md`}
           onClick={() => navigate("/events")}
         >
-          <h2 className={`${styles.squareHeader} text-uppercase`}>Events</h2>
+          <h2 className={`${styles.squareHeading} text-uppercase`}>Events</h2>
           <PatternBlue className={styles.pattern} />
         </div>
 
@@ -39,7 +39,7 @@ const Squares = () => (
           } col-md`}
           onClick={() => navigate("/sponsor")}
         >
-          <h2 className={`${styles.squareHeader} text-uppercase`}>Sponsor</h2>
+          <h2 className={`${styles.squareHeading} text-uppercase`}>Sponsor</h2>
 
           <PatternGreen className={styles.pattern} />
         </div>
