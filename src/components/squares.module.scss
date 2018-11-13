@@ -8,7 +8,7 @@
     padding-right: 0;
 
     :global(.row) {
-      height: 18.75rem; // TODO: ask ryan about dimensions
+      height: $section-height; // TODO: ask ryan about dimensions
       margin: 0;
 
       a {
@@ -58,7 +58,7 @@
       }
 
       .yellow-square {
-        background-color: rgba($anvil-gold, 0.9);
+        background-color: $anvil-gold;
         color: $dark-grey-2;
       }
 

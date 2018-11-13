@@ -2,7 +2,7 @@
 @import "../stylesheets/bootstrap-required";
 
 .section {
-  height: 25rem;
+  height: calc(100vh - #{$section-height} - #{$navbar-height});
   display: flex;
   align-items: center;
 
@@ -31,13 +31,13 @@
   }
 
   &-link {
-    color: $grey;
+    color: $blue;
     text-decoration: underline;
     font-size: 1.5625rem;
     letter-spacing: 0.3125rem;
   }
 
   &-link:hover {
-    color: darken($grey, 50%);
+    color: darken($blue, 50%);
   }
 }

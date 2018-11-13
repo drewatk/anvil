@@ -2,8 +2,6 @@
 @import "../stylesheets/mixins.scss";
 
 .section {
-  min-height: 20rem;
-
   :global(.container) {
     padding-top: 3.125rem; // TODO: padding variable
     padding-bottom: 3.125rem;

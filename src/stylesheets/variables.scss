@@ -12,11 +12,16 @@ $font-weight-bold: 700;
 
 /* Colors */
 
-$anvil-gold: #ffcd2e; /* or is it #fbce0e? or FFCD2E? */
-$grey: #2e5266;
+$anvil-gold: rgba(#ffcd2e, 0.9); /* or is it #fbce0e? or FFCD2E? */
+$grey: #6d6d6d;
+$light-grey: #f3f3f3;
 $dark-grey: #3c3c3c;
 $dark-grey-2: #353535;
 $white: #fff;
 $black: #000;
 $green: #6e9a73;
 $blue: #2e5266;
+
+/* Sections */
+$section-height: 18.75rem;
+$navbar-height: 5rem;

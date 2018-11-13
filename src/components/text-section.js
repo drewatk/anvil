@@ -1,8 +1,9 @@
 import React from "react";
+import Img from "gatsby-image";
 
 import styles from "./text-section.module.scss";
 
-const TitleSection = ({ title, subheading, paragraphs, theme }) => {
+const TitleSection = ({ title, subheading, paragraphs, theme, imageFluid }) => {
   const sectionClasses = [
     styles.section,
     theme === "blue" ? styles.sectionBlue : "",
@@ -18,15 +19,15 @@ const TitleSection = ({ title, subheading, paragraphs, theme }) => {
           <div className="col-md-8">
             <h3 className={`${styles.title} text-uppercase`}>{title}</h3>
             <h4 className={styles.subheading}>{subheading}</h4>
-            {paragraphs.map(para => {
-              return <p>{para}</p>;
-            })}
+            {paragraphs &&
+              paragraphs.map((para, index) => {
+                return <p key={index}>{para}</p>;
+              })}
           </div>
           <div className="col-md-4">
-            <img
-              className="img-thumbnail"
-              src="https://via.placeholder.com/500"
-            />
+            {/* {imageSource && (
+              <Img className="img-thumbnail" fluid={imageFluid} />
+            )} */}
           </div>
         </div>
       </div>
