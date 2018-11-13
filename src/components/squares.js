@@ -4,8 +4,8 @@ import { navigate } from "gatsby";
 import styles from "./squares.module.scss";
 
 import PatternBlue from "../assets/pattern_blue.svg";
-import PatternYellow from "../assets/pattern_Yellow.svg";
-import PatternGreen from "../assets/pattern_Green.svg";
+import PatternYellow from "../assets/pattern_yellow.svg";
+import PatternGreen from "../assets/pattern_green.svg";
 
 const Squares = () => (
   <div className={styles.squares}>

@@ -1,14 +1,18 @@
 import React from "react";
-import Img from "gatsby-image";
 
 import styles from "./text-section.module.scss";
 
-const TitleSection = ({ title, subheading, paragraphs, theme, imageFluid }) => {
-  const sectionClasses = [
-    styles.section,
-    theme === "blue" ? styles.sectionBlue : "",
-    theme === "gold" ? styles.sectionGold : ""
-  ]
+const TextSectionWithPicture = ({
+  title,
+  subheading,
+  paragraphs,
+  index,
+  imageFluid,
+  Pattern
+}) => {
+  index = index ? index : 0;
+
+  const sectionClasses = [styles.section, index % 2 ? styles.sectionGrey : ""]
     .join(" ")
     .trim();
 
@@ -16,7 +20,11 @@ const TitleSection = ({ title, subheading, paragraphs, theme, imageFluid }) => {
     <div className={sectionClasses}>
       <div className="container">
         <div className="row">
-          <div className="col-md-8">
+          <div className={imageFluid ? "col-md-4" : "col-12"}>
+            <Pattern
+              className={styles.pattern}
+              style={{ transform: `rotate(${90 * index}deg)` }}
+            />
             <h3 className={`${styles.title} text-uppercase`}>{title}</h3>
             <h4 className={styles.subheading}>{subheading}</h4>
             {paragraphs &&
@@ -24,7 +32,7 @@ const TitleSection = ({ title, subheading, paragraphs, theme, imageFluid }) => {
                 return <p key={index}>{para}</p>;
               })}
           </div>
-          <div className="col-md-4">
+          <div className={imageFluid ? "col-md-4" : ""}>
             {/* {imageSource && (
               <Img className="img-thumbnail" fluid={imageFluid} />
             )} */}
@@ -35,4 +43,4 @@ const TitleSection = ({ title, subheading, paragraphs, theme, imageFluid }) => {
   );
 };
 
-export default TitleSection;
+export default TextSectionWithPicture;

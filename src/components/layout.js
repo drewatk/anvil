@@ -11,6 +11,8 @@ import "../stylesheets/index.scss";
 import "typeface-open-sans";
 import "typeface-poppins";
 
+import favicon from "../assets/favicon.ico";
+
 import styles from "./layout.module.scss";
 
 const Layout = ({ children }) => (
@@ -35,6 +37,9 @@ const Layout = ({ children }) => (
               content: data.site.siteMetadata.description
             },
             { name: "keywords", content: "sample, something" }
+          ]}
+          link={[
+            { rel: "shortcut icon", type: "image/png", href: `${favicon}` }
           ]}
         >
           <html lang="en" />

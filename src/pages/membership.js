@@ -5,7 +5,7 @@ import TitleSection from "../components/title-section";
 import TextSection from "../components/text-section";
 import Pricing from "../components/pricing";
 
-import styles from "./events.module.scss";
+import PatternYellow from "../assets/pattern_yellow.svg";
 
 const section = {
   title: "Pricing",
@@ -14,11 +14,10 @@ const section = {
 
 const MembershipPage = () => (
   <Layout>
-    <TitleSection title="Membership" theme="gold" />
-    <div className={styles.sections}>
-      {/* <TextSection {...section1} />  */}
-      <TextSection {...section} />
-    </div>
+    <TitleSection Pattern={PatternYellow} title="Membership" theme="gold" />
+    {/* TODO: perks section */}
+    <TextSection Pattern={PatternYellow} {...section} index={0} />
+
     <Pricing />
   </Layout>
 );

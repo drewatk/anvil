@@ -1,5 +1,6 @@
 @import "../stylesheets/variables";
 @import "../stylesheets/mixins";
+
 .section {
   height: 20rem;
   display: flex;
@@ -8,6 +9,10 @@
   .title {
     margin: 0 auto;
     @include page-title-type;
+  }
+
+  .pattern {
+    align-self: flex-end;
   }
 }
 

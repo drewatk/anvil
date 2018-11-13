@@ -25,16 +25,19 @@
     @include media-breakpoint-up(md) {
       font-size: 3rem;
     }
-    font-weight: 400;
+    font-weight: $font-weight-normal;
     letter-spacing: 0.3125rem;
     color: $dark-grey;
   }
 
   &-link {
-    color: $blue;
-    text-decoration: underline;
-    font-size: 1.5625rem;
-    letter-spacing: 0.3125rem;
+    h3 {
+      color: $blue;
+      text-decoration: underline;
+      font-size: 1.5625rem;
+      letter-spacing: 0.3125rem;
+      font-weight: $font-weight-light;
+    }
   }
 
   &-link:hover {

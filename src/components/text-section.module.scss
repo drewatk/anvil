@@ -5,6 +5,7 @@
   :global(.container) {
     padding-top: 3.125rem; // TODO: padding variable
     padding-bottom: 3.125rem;
+    padding-left: 4rem;
     .title {
       @include heading-type;
     }
@@ -17,5 +18,16 @@
       display: flex;
       align-items: center;
     }
+
+    .pattern {
+      position: absolute;
+      left: -3rem; // TODO: somtimes puts it off screen
+      height: 3rem;
+      width: 3rem;
+    }
   }
+}
+
+.section-grey {
+  background-color: $light-grey;
 }

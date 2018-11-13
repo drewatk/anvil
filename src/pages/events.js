@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import TitleSection from "../components/title-section";
 import TextSection from "../components/text-section";
 
-import styles from "./events.module.scss";
+import PatternBlue from "../assets/pattern_blue.svg";
 
 const section2 = {
   title: "Section 2",
@@ -13,8 +13,6 @@ const section2 = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus auctor vestibulum. Ut efficitur scelerisque sagittis. Aliquam dignissim fringilla laoreet. Sed auctor erat id erat fermentum eleifend. Nam arcu magna, egestas nec sem a, ultrices fringilla augue. Praesent ac feugiat ex, at vulputate diam. Maecenas vel hendrerit lorem, ac faucibus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis dolor imperdiet, blandit ex in, congue risus."
   ]
 };
-
-console.log(styles.events);
 
 const EventsPage = ({ data }) => {
   const section1 = {
@@ -27,11 +25,11 @@ const EventsPage = ({ data }) => {
   };
   return (
     <Layout>
-      <TitleSection title="Events" theme="blue" />
-      <div className={styles.sections}>
-        <TextSection {...section1} />
-        <TextSection {...section2} />
-      </div>
+      <TitleSection Pattern={PatternBlue} title="Events" theme="blue" />
+      <TextSection Pattern={PatternBlue} {...section1} index={0} />
+      <TextSection Pattern={PatternBlue} {...section2} index={1} />
+      <TextSection Pattern={PatternBlue} {...section2} index={2} />
+      <TextSection Pattern={PatternBlue} {...section2} index={3} />
     </Layout>
   );
 };
