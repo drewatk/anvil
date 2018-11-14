@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import TitleSection from "../components/title-section";
@@ -6,44 +7,44 @@ import TextSection from "../components/text-section";
 
 import PatternBlue from "../assets/pattern_blue.svg";
 
-const section2 = {
-  title: "Section 2",
-  subheading: "Lorem ispum blah blah blah",
-  paragraphs: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus auctor vestibulum. Ut efficitur scelerisque sagittis. Aliquam dignissim fringilla laoreet. Sed auctor erat id erat fermentum eleifend. Nam arcu magna, egestas nec sem a, ultrices fringilla augue. Praesent ac feugiat ex, at vulputate diam. Maecenas vel hendrerit lorem, ac faucibus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis dolor imperdiet, blandit ex in, congue risus."
-  ]
-};
-
 const EventsPage = ({ data }) => {
   const section1 = {
     title: "The Boiler",
     subheading: "Lorem ispum blah blah blah",
     paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus auctor vestibulum. Ut efficitur scelerisque sagittis. Aliquam dignissim fringilla laoreet. Sed auctor erat id erat fermentum eleifend. Nam arcu magna, egestas nec sem a, ultrices fringilla augue. Praesent ac feugiat ex, at vulputate diam. Maecenas vel hendrerit lorem, ac faucibus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis dolor imperdiet, blandit ex in, congue risus.",
-      "Ut molestie volutpat consectetur. Pellentesque et orci sem. Morbi tempor suscipit venenatis. Morbi luctus nulla id est luctus, vel efficitur augue ultrices. Maecenas semper posuere semper. Aenean sagittis at libero non elementum. Praesent quis interdum nisi. Suspendisse eget nisl sed augue pulvinar sagittis ac eu nunc. Nunc pretium rutrum vehicula. Aliquam erat volutpat. Duis et tincidunt mi. Donec quis hendrerit orci. Etiam congue porttitor nisi nec cursus. Ut molestie volutpat consectetur. Pellentesque et orci sem. Morbi tempor suscipit venenatis. Morbi luctus nulla id est luctus, vel efficitur augue ultrices. Maecenas semper posuere semper. Aenean sagittis at libero non elementum. Praesent quis interdum nisi. Suspendisse eget nisl sed augue pulvinar sagittis ac eu nunc. Nunc pretium rutrum vehicula. Aliquam erat volutpat. Duis et tincidunt mi. Donec quis hendrerit orci. Etiam congue porttitor nisi nec cursus. Ut molestie volutpat consectetur. Pellentesque et orci sem. Morbi tempor suscipit venenatis. Morbi luctus nulla id est luctus, vel efficitur augue ultrices. Maecenas semper posuere semper. Aenean sagittis at libero non elementum. Praesent quis interdum nisi. Suspendisse eget nisl sed augue pulvinar sagittis ac eu nunc. Nunc pretium rutrum vehicula. Aliquam erat volutpat. Duis et tincidunt mi. Donec quis hendrerit orci. Etiam congue porttitor nisi nec cursus."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus auctor vestibulum. Ut efficitur scelerisque sagittis. Aliquam dignissim fringilla laoreet. Sed auctor erat id erat fermentum eleifend. Nam arcu magna, egestas nec sem a, ultrices fringilla augue. Praesent ac feugiat ex, at vulputate diam. Maecenas vel hendrerit lorem, ac faucibus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis dolor imperdiet, blandit ex in, congue risus."
+    ],
+    imageFluid: data.imageOne.childImageSharp.fluid
+  };
+  const section2 = {
+    title: "Section 2",
+    subheading: "Lorem ispum blah blah blah",
+    paragraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus auctor vestibulum. Ut efficitur scelerisque sagittis. Aliquam dignissim fringilla laoreet. Sed auctor erat id erat fermentum eleifend. Nam arcu magna, egestas nec sem a, ultrices fringilla augue. Praesent ac feugiat ex, at vulputate diam. Maecenas vel hendrerit lorem, ac faucibus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis dolor imperdiet, blandit ex in, congue risus."
     ]
   };
+
+  const textSections = [section1, section2];
   return (
     <Layout>
       <TitleSection Pattern={PatternBlue} title="Events" theme="blue" />
-      <TextSection Pattern={PatternBlue} {...section1} index={0} />
-      <TextSection Pattern={PatternBlue} {...section2} index={1} />
-      <TextSection Pattern={PatternBlue} {...section2} index={2} />
-      <TextSection Pattern={PatternBlue} {...section2} index={3} />
+      {textSections.map((section, index) => (
+        <TextSection Pattern={PatternBlue} {...section} index={index} />
+      ))}
     </Layout>
   );
 };
 
 export default EventsPage;
 
-// export const pageQuery = graphql`
-//   query {
-//     imageOne: file(relativePath: { eq: "anvil_logo.png" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 1000) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query {
+    imageOne: file(relativePath: { eq: "img/boiler.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

@@ -5,6 +5,13 @@ module.exports = {
   },
   pathPrefix: "/anvil",
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: "assets"
+      }
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,

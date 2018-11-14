@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 
 import styles from "./text-section.module.scss";
 
@@ -16,11 +17,13 @@ const TextSectionWithPicture = ({
     .join(" ")
     .trim();
 
+  console.log(imageFluid);
+
   return (
     <div className={sectionClasses}>
       <div className="container">
         <div className="row">
-          <div className={imageFluid ? "col-md-4" : "col-12"}>
+          <div className={imageFluid ? "col-md-7" : "col-12"}>
             <Pattern
               className={styles.pattern}
               style={{ transform: `rotate(${90 * index}deg)` }}
@@ -32,10 +35,8 @@ const TextSectionWithPicture = ({
                 return <p key={index}>{para}</p>;
               })}
           </div>
-          <div className={imageFluid ? "col-md-4" : ""}>
-            {/* {imageSource && (
-              <Img className="img-thumbnail" fluid={imageFluid} />
-            )} */}
+          <div className={imageFluid ? "col-md-5" : ""}>
+            {imageFluid && <Img fluid={imageFluid} style={{ width: "100%" }} />}
           </div>
         </div>
       </div>
