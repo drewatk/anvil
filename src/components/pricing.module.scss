@@ -1,105 +1,125 @@
 @import "../stylesheets/variables";
-@import "../stylesheets/bootstrap-required.scss";
+@import "../stylesheets/bootstrap-required";
 
-$tri-side: 400px;
+// switch to slants
+.section {
+  background: $anvil-gold;
+  position: relative;
 
-@include media-breakpoint-up(md) { 
-  // switch to slants
-  .section {
-    height: $tri_side;
+  .rhombus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: $anvil-gold;
-    position: relative;
-  
-    .rhombus {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $anvil-gold;
-      z-index: 0;
-  
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-    }
-  
-    .left-triangle, .right-triangle {
-      z-index: 1;
-      width: 0; 
-      height: 0; 
-      position: absolute;
-    }
-  
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-triangle,
+  .right-triangle {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  .left-triangle {
+    top: 0;
+    left: 0;
+  }
+
+  .right-triangle {
+    bottom: 0;
+    right: 0;
+  }
+
+  .left-content,
+  .right-content {
+    z-index: 2;
+    position: absolute;
+  }
+
+  .left-content {
+    top: 0;
+    left: 0;
+  }
+
+  .right-content {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section {
+    $tri-side: 400px;
+    height: $tri-side;
+
     .left-triangle {
-      border-top: #{$tri_side} solid $grey; 
+      border-top: #{$tri_side} solid $grey;
       border-right: #{$tri_side} solid transparent;
-      top: 0;
-      left: 0;
     }
-  
+
     .right-triangle {
-      border-bottom: #{$tri_side} solid $white; 
+      border-bottom: #{$tri_side} solid $white;
       border-left: #{$tri_side} solid transparent;
-      bottom: 0;
-      right: 0;
     }
-  
-    .left-content, .right-content {
+
+    .left-content,
+    .right-content {
       width: calc(#{$tri_side} / 1.67);
       height: calc(#{$tri_side} / 2.5);
-      z-index: 2;
-      position: absolute;
     }
-  
-    .left-content {
-      top: 0;
-      left: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section {
+    $tri-side: 500px;
+    height: $tri-side;
+
+    .left-triangle {
+      border-top: #{$tri_side} solid $grey;
+      border-right: #{$tri_side} solid transparent;
     }
-  
+
+    .right-triangle {
+      border-bottom: #{$tri_side} solid $white;
+      border-left: #{$tri_side} solid transparent;
+    }
+
+    .left-content,
     .right-content {
-      bottom: 0;
-      right: 0;
+      width: calc(#{$tri_side} / 1.67);
+      height: calc(#{$tri_side} / 2.5);
     }
-}
-
-@include media-breakpoint-up(lg) { 
-  $tri-side: 500px;
-
-  .left-triangle {
-    border-top-width: #{$tri_side}; 
-    border-right: #{$tri_side};
-  }
-
-  .right-triangle {
-    border-bottom-width: #{$tri_side}; 
-    border-left-width: #{$tri_side};
-  }
-
-  .left-content, .right-content {
-    width: calc(#{$tri_side} / 1.67);
-    height: calc(#{$tri_side} / 2.5);
   }
 }
 
-@include media-breakpoint-up(xl) { 
-  $tri-side: 700px;
+@include media-breakpoint-up(xl) {
+  .section {
+    $tri-side: 700px;
+    height: $tri-side;
 
-  .left-triangle {
-    border-top: #{$tri_side}; 
-    border-right: #{$tri_side};
+    .left-triangle {
+      border-top: #{$tri_side} solid $grey;
+      border-right: #{$tri_side} solid transparent;
+    }
+
+    .right-triangle {
+      border-bottom: #{$tri_side} solid $white;
+      border-left: #{$tri_side} solid transparent;
+    }
+
+    .left-content,
+    .right-content {
+      width: calc(#{$tri_side} / 1.67);
+      height: calc(#{$tri_side} / 2.5);
+    }
   }
-
-  .right-triangle {
-    border-bottom: #{$tri_side}; 
-    border-left: #{$tri_side};
-  }
-
-  .left-content, .right-content {
-    width: calc(#{$tri_side} / 1.67);
-    height: calc(#{$tri_side} / 2.5);
-  }
-}
-
 }
