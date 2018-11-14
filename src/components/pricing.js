@@ -8,11 +8,15 @@ import facebookIcon from "../assets/icons8-facebook.png";
 
 const Pricing = () => (
   <div className={styles.section}>
-    <div className={styles.leftTriangle}>
+    <div className={styles.leftTriangle}></div>
+    <div className={styles.leftContent}>
       <h4>Students</h4>
     </div>
+    <div className={styles.rhombus}>
+      <h4>Join Now</h4>
+    </div>
     <div className={styles.rightTriangle}>
-      <h4>Community Members</h4>
+      {/* <h4>Community Members</h4> */}
     </div>
   </div>
 );

@@ -1,25 +1,59 @@
 @import "../stylesheets/variables";
 
+$std_height: 37.5rem;
+$tri_width: 35vw;
+
 .section {
-  height: 37.5rem;
+  height: $std_height;
   background: $anvil-gold;
   position: relative;
 
-  .right-triangle {
+  .left-triangle {
+    z-index: 1;
+    width: 0; 
+    height: 0; 
+    border-top: #{$std_height} solid $grey; 
+    border-right: #{$tri_width} solid transparent;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: $white;
-    -webkit-clip-path: polygon(100% 0, 67% 100%, 100% 100%);
-    clip-path: polygon(100% 0, 67% 100%, 100% 100%);
+    top: 0;
+    left: 0;
+  
   }
 
-  .left-triangle {
+  .left-content {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(#{$tri_width} / 1.67);
+    height: calc(#{$std_height} / 2.5);
+    z-index: 2;
+    background: $white;
+  }
+
+  .rhombus {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: $grey;
-    -webkit-clip-path: polygon(0 0, 0% 100%, 37.5rem, 0);
-    clip-path: polygon(0 0, 0% 100%, 37.5rem, 0);
+    background: $anvil-gold;
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
+
+  .right-triangle {
+    z-index: 1;
+    width: 0; 
+    height: 0; 
+    border-bottom: #{$std_height} solid $white; 
+    border-left: #{$tri_width} solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
 }
