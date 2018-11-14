@@ -15,8 +15,9 @@ const Pricing = () => (
     <div className={styles.rhombus}>
       <h4>Join Now</h4>
     </div>
-    <div className={styles.rightTriangle}>
-      {/* <h4>Community Members</h4> */}
+    <div className={styles.rightTriangle}></div>
+    <div className={styles.rightContent}>
+      <h4>Community Members</h4>
     </div>
   </div>
 );

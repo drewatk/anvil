@@ -8,28 +8,6 @@ $tri_width: 35vw;
   background: $anvil-gold;
   position: relative;
 
-  .left-triangle {
-    z-index: 1;
-    width: 0; 
-    height: 0; 
-    border-top: #{$std_height} solid $grey; 
-    border-right: #{$tri_width} solid transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-  
-  }
-
-  .left-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(#{$tri_width} / 1.67);
-    height: calc(#{$std_height} / 2.5);
-    z-index: 2;
-    background: $white;
-  }
-
   .rhombus {
     position: absolute;
     top: 0;
@@ -45,13 +23,40 @@ $tri_width: 35vw;
 
   }
 
-  .right-triangle {
+  .left-triangle, .right-triangle {
     z-index: 1;
     width: 0; 
     height: 0; 
+    position: absolute;
+  }
+
+  .left-triangle {
+    border-top: #{$std_height} solid $grey; 
+    border-right: #{$tri_width} solid transparent;
+    top: 0;
+    left: 0;
+  }
+
+  .right-triangle {
     border-bottom: #{$std_height} solid $white; 
     border-left: #{$tri_width} solid transparent;
+    bottom: 0;
+    right: 0;
+  }
+
+  .left-content, .right-content {
+    width: calc(#{$tri_width} / 1.67);
+    height: calc(#{$std_height} / 2.5);
+    z-index: 2;
     position: absolute;
+  }
+
+  .left-content {
+    top: 0;
+    left: 0;
+  }
+
+  .right-content {
     bottom: 0;
     right: 0;
   }
