@@ -1,64 +1,105 @@
 @import "../stylesheets/variables";
+@import "../stylesheets/bootstrap-required.scss";
 
-$std_height: 37.5rem;
-$tri_width: 35vw;
+$tri-side: 400px;
 
-.section {
-  height: $std_height;
-  background: $anvil-gold;
-  position: relative;
-
-  .rhombus {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+@include media-breakpoint-up(md) { 
+  // switch to slants
+  .section {
+    height: $tri_side;
     background: $anvil-gold;
-    z-index: 0;
+    position: relative;
+  
+    .rhombus {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $anvil-gold;
+      z-index: 0;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    }
+  
+    .left-triangle, .right-triangle {
+      z-index: 1;
+      width: 0; 
+      height: 0; 
+      position: absolute;
+    }
+  
+    .left-triangle {
+      border-top: #{$tri_side} solid $grey; 
+      border-right: #{$tri_side} solid transparent;
+      top: 0;
+      left: 0;
+    }
+  
+    .right-triangle {
+      border-bottom: #{$tri_side} solid $white; 
+      border-left: #{$tri_side} solid transparent;
+      bottom: 0;
+      right: 0;
+    }
+  
+    .left-content, .right-content {
+      width: calc(#{$tri_side} / 1.67);
+      height: calc(#{$tri_side} / 2.5);
+      z-index: 2;
+      position: absolute;
+    }
+  
+    .left-content {
+      top: 0;
+      left: 0;
+    }
+  
+    .right-content {
+      bottom: 0;
+      right: 0;
+    }
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  .left-triangle, .right-triangle {
-    z-index: 1;
-    width: 0; 
-    height: 0; 
-    position: absolute;
-  }
+@include media-breakpoint-up(lg) { 
+  $tri-side: 500px;
 
   .left-triangle {
-    border-top: #{$std_height} solid $grey; 
-    border-right: #{$tri_width} solid transparent;
-    top: 0;
-    left: 0;
+    border-top-width: #{$tri_side}; 
+    border-right: #{$tri_side};
   }
 
   .right-triangle {
-    border-bottom: #{$std_height} solid $white; 
-    border-left: #{$tri_width} solid transparent;
-    bottom: 0;
-    right: 0;
+    border-bottom-width: #{$tri_side}; 
+    border-left-width: #{$tri_side};
   }
 
   .left-content, .right-content {
-    width: calc(#{$tri_width} / 1.67);
-    height: calc(#{$std_height} / 2.5);
-    z-index: 2;
-    position: absolute;
+    width: calc(#{$tri_side} / 1.67);
+    height: calc(#{$tri_side} / 2.5);
+  }
+}
+
+@include media-breakpoint-up(xl) { 
+  $tri-side: 700px;
+
+  .left-triangle {
+    border-top: #{$tri_side}; 
+    border-right: #{$tri_side};
   }
 
-  .left-content {
-    top: 0;
-    left: 0;
+  .right-triangle {
+    border-bottom: #{$tri_side}; 
+    border-left: #{$tri_side};
   }
 
-  .right-content {
-    bottom: 0;
-    right: 0;
+  .left-content, .right-content {
+    width: calc(#{$tri_side} / 1.67);
+    height: calc(#{$tri_side} / 2.5);
   }
+}
 
 }
