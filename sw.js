@@ -11,8 +11,8 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("workbox-v3.6.2/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "workbox-v3.6.2"});
+importScripts("workbox-v3.6.3/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "workbox-v3.6.3"});
 
 workbox.core.setCacheNameDetails({prefix: "gatsby-plugin-offline"});
 
@@ -26,46 +26,32 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0403159604a62d499f26.js"
+    "url": "webpack-runtime-80af5e07c9a5005c0845.js"
   },
   {
-    "url": "app-a1db51379b604b4b7529.js"
+    "url": "app-a112971345fd18291f89.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-70fa0028ee7496e8897a.js"
-  },
-  {
-    "url": "index.html",
-    "revision": "30ffe36ffbf3f246072a14154214d062"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-6f2a176f98b0da76acc0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d7b30636e0ba2ffb8f5cdd253a9c8f0a"
+    "revision": "022e836b28e55a2a1231bdba9a2c5df6"
+  },
+  {
+    "url": "0.6e39660dbd8156ebaca9.css"
   },
   {
     "url": "1.ae77423fe0b27f6437fc.css"
   },
   {
-    "url": "0.207bc0995221b18cd3ef.css"
-  },
-  {
-    "url": "component---src-pages-index-js.b02b2eb5edfcc6eac800.css"
-  },
-  {
-    "url": "component---src-pages-index-js-d63a896dcd79b2b01933.js"
-  },
-  {
-    "url": "1-269a118e6e0f52247e4d.js"
-  },
-  {
-    "url": "0-876138e66a5b3462ed17.js"
-  },
-  {
-    "url": "static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json",
-    "revision": "c2508676a2f33ea9f1f0bf472997f9a0"
+    "url": "1-1348b839f427d3545448.js"
   },
   {
     "url": "component---src-pages-404-js-261e6283ca4d3b499ebe.js"
+  },
+  {
+    "url": "0-811c2e70f93a9de3a342.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -84,12 +70,12 @@ workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute("/anvil/offline-plugin-app-shell-fallback/index.html", {
-  whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
+  whitelist: [/^([^.?]*|[^?]*\.([^.?]{5,}|html))(\?.*)?$/],
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
 
 workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, workbox.strategies.staleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https:/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/^https?:/, workbox.strategies.networkFirst(), 'GET');
 "use strict";
 
 /* global workbox */
@@ -101,10 +87,19 @@ self.addEventListener("message", function (event) {
     var cacheName = workbox.core.cacheNames.runtime;
     event.waitUntil(caches.open(cacheName).then(function (cache) {
       return Promise.all(resources.map(function (resource) {
-        return cache.add(resource).catch(function (e) {
-          // ignore TypeErrors - these are usually due to
-          // external resources which don't allow CORS
-          if (!(e instanceof TypeError)) throw e;
+        var request; // Some external resources don't allow
+        // CORS so get an opaque response
+
+        if (resource.match(/^https?:/)) {
+          request = fetch(resource, {
+            mode: "no-cors"
+          });
+        } else {
+          request = fetch(resource);
+        }
+
+        return request.then(function (response) {
+          return cache.put(resource, response);
         });
       }));
     }));
