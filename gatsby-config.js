@@ -13,7 +13,6 @@ module.exports = {
       }
     },
     "gatsby-plugin-react-helmet",
-    // "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -23,6 +22,5 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-react-svg"
-    // "gatsby-plugin-remove-trailing-slashes"
   ]
 };
