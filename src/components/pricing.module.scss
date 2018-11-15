@@ -7,103 +7,115 @@
   position: relative;
 
   .rhombus {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $anvil-gold;
-    z-index: 0;
+    display: block;
+    height: 20vh;
+    min-height: 100px;
 
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .left-triangle,
-  .right-triangle {
-    z-index: 1;
-    width: 0;
-    height: 0;
-    position: absolute;
+  .left-triangle, .right-triangle {
+    display: none;
   }
 
-  .left-triangle {
-    top: 0;
-    left: 0;
-  }
+  .left-content, .right-content {
+    height: 30vh;
+    width: 100vw;
+    min-height: 200px;
 
-  .right-triangle {
-    bottom: 0;
-    right: 0;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-  .left-content,
-  .right-content {
-    z-index: 2;
-    position: absolute;
+    font-size: 0.8rem;
+
+    .join-link {
+      color: $anvil-gold;
+      text-decoration: underline;
+    }
   }
 
   .left-content {
-    top: 0;
-    left: 0;
+    background: $grey;
   }
 
   .right-content {
-    bottom: 0;
-    right: 0;
+    background: $white;
   }
+
 }
 
 @include media-breakpoint-up(md) {
   .section {
-    $tri-side: 400px;
+    $tri-side: 500px;
     height: $tri-side;
+
+    .left-triangle,
+    .right-triangle {
+      z-index: 1;
+      width: 0;
+      height: 0;
+      position: absolute;
+      display: inline-block;
+    }
+
+    .rhombus {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $anvil-gold;
+      z-index: 0;
+    }
 
     .left-triangle {
       border-top: #{$tri_side} solid $grey;
       border-right: #{$tri_side} solid transparent;
+      top: 0;
+      left: 0;
     }
 
     .right-triangle {
       border-bottom: #{$tri_side} solid $white;
       border-left: #{$tri_side} solid transparent;
+      bottom: 0;
+      right: 0;
     }
 
     .left-content,
     .right-content {
       width: calc(#{$tri_side} / 1.67);
       height: calc(#{$tri_side} / 2.5);
+      z-index: 2;
+      position: absolute;
+      min-height: 0;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      padding: 30px;
+    }
+  
+    .left-content {
+      top: 0;
+      left: 0;
+      align-items: flex-start;
+    }
+  
+    .right-content {
+      bottom: 0;
+      right: 0;
+      align-items: flex-end;
     }
   }
 }
 
 @include media-breakpoint-up(lg) {
   .section {
-    $tri-side: 500px;
-    height: $tri-side;
-
-    .left-triangle {
-      border-top: #{$tri_side} solid $grey;
-      border-right: #{$tri_side} solid transparent;
-    }
-
-    .right-triangle {
-      border-bottom: #{$tri_side} solid $white;
-      border-left: #{$tri_side} solid transparent;
-    }
-
-    .left-content,
-    .right-content {
-      width: calc(#{$tri_side} / 1.67);
-      height: calc(#{$tri_side} / 2.5);
-    }
-  }
-}
-
-@include media-breakpoint-up(xl) {
-  .section {
-    $tri-side: 700px;
+    $tri-side: 600px;
     height: $tri-side;
 
     .left-triangle {
