@@ -5,12 +5,12 @@
 .section {
   background: $anvil-gold;
   position: relative;
+  min-width: 300px;
+  width: 100vw;
 
   .rhombus {
     display: block;
-    height: 20vh;
-    min-height: 100px;
-
+    height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,29 +21,49 @@
   }
 
   .left-content, .right-content {
-    height: 30vh;
-    width: 100vw;
+    width: 100%;
     min-height: 200px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 
     font-size: 0.8rem;
 
+    padding: 20px 30px;
+
     .join-link {
-      color: $anvil-gold;
+      color: $anvil-gold-solid;
       text-decoration: underline;
     }
+
+    text-align: center;
   }
 
   .left-content {
     background: $grey;
+    color: $white;
   }
 
   .right-content {
     background: $white;
+    color: $grey;
+  }
+
+  .logo {
+    height: 30px;
+    :global(.anvil-logo-path) {
+      fill: $anvil-gold-solid;
+    }
+  }
+
+  .price {
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5rem;
+    }
   }
 
 }
@@ -52,6 +72,13 @@
   .section {
     $tri-side: 500px;
     height: $tri-side;
+
+    .logo {
+      height: 50px;
+      :global(.anvil-logo-path) {
+        fill: $dark-grey;
+      }
+    } 
 
     .left-triangle,
     .right-triangle {
@@ -96,19 +123,21 @@
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-      padding: 30px;
+      padding: 20px 30px;
     }
   
     .left-content {
       top: 0;
       left: 0;
       align-items: flex-start;
+      text-align: left;
     }
   
     .right-content {
       bottom: 0;
       right: 0;
       align-items: flex-end;
+      text-align: right;
     }
   }
 }
@@ -117,6 +146,10 @@
   .section {
     $tri-side: 600px;
     height: $tri-side;
+
+    .logo {
+      height: 70px;
+    } 
 
     .left-triangle {
       border-top: #{$tri_side} solid $grey;
