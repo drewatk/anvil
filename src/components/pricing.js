@@ -29,7 +29,7 @@ const Pricing = () => (
     <div className={styles.rightContent}>
       <h5><a className={styles.joinLink} href="">Join Now &#8594;</a></h5>
       <div className={styles.price}>
-        <h4><bold>$10</bold></h4>
+        <h4><bold>$30</bold></h4>
         <h6>Per Month</h6>
       </div>
       <h5>Non-Students</h5>
