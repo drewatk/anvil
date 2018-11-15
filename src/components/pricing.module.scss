@@ -10,10 +10,10 @@
 
   .rhombus {
     display: block;
-    height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
   }
 
   .left-triangle, .right-triangle {
@@ -31,10 +31,10 @@
 
     font-size: 0.8rem;
 
-    padding: 20px 30px;
+    padding: 10px 30px;
 
     .join-link {
-      color: $anvil-gold-solid;
+      color: $anvil-gold;
       text-decoration: underline;
     }
 
@@ -54,7 +54,7 @@
   .logo {
     height: 30px;
     :global(.anvil-logo-path) {
-      fill: $anvil-gold-solid;
+      fill: $dark-grey;
     }
   }
 
@@ -72,13 +72,6 @@
   .section {
     $tri-side: 500px;
     height: $tri-side;
-
-    .logo {
-      height: 50px;
-      :global(.anvil-logo-path) {
-        fill: $dark-grey;
-      }
-    } 
 
     .left-triangle,
     .right-triangle {
@@ -123,7 +116,6 @@
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-      padding: 20px 30px;
     }
   
     .left-content {
@@ -138,6 +130,10 @@
       right: 0;
       align-items: flex-end;
       text-align: right;
+    }
+
+    .logo {
+      height: 50px;
     }
   }
 }
