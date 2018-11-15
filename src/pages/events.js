@@ -7,7 +7,7 @@ import TextSection from "../components/text-section";
 
 import PatternBlue from "../assets/pattern_blue.svg";
 
-const EventsPage = ({ data }) => {
+const EventsPage = ({ data, location }) => {
   const section1 = {
     title: "The Boiler",
     subheading: "Lorem ispum blah blah blah",
@@ -26,7 +26,7 @@ const EventsPage = ({ data }) => {
 
   const textSections = [section1, section2];
   return (
-    <Layout>
+    <Layout location={location}>
       <TitleSection Pattern={PatternBlue} title="Events" theme="blue" />
       {textSections.map((section, index) => (
         <TextSection Pattern={PatternBlue} {...section} index={index} />

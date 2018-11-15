@@ -1,8 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
-import { Location } from "@reach/router";
+import { StaticQuery, graphql, withPrefix } from "gatsby";
 
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -15,7 +13,7 @@ import favicon from "../assets/favicon.ico";
 
 import styles from "./layout.module.scss";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -44,27 +42,21 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Location>
-          {({ location: { pathname } }) => {
-            return pathname.endsWith("/") ? (
-              <div className={styles.squares}>
-                <div className={styles.yellowSquare} />
-                <div className={styles.greenSquare} />
-                <div className={styles.blueSquare} />
-              </div>
-            ) : null;
-          }}
-        </Location>
-        <Navbar siteTitle={data.site.siteMetadata.title} />
+
+        {location.pathname === withPrefix("/") ? (
+          <div className={styles.squares}>
+            <div className={styles.yellowSquare} />
+            <div className={styles.greenSquare} />
+            <div className={styles.blueSquare} />
+          </div>
+        ) : null}
+
+        <Navbar location={location} />
         <div className={styles.container}>{children}</div>
         <Footer />
       </>
     )}
   />
 );
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
 
 export default Layout;

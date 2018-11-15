@@ -12,8 +12,8 @@ const section = {
   subheading: "We'd Love for you to join our community"
 };
 
-const MembershipPage = () => (
-  <Layout>
+const MembershipPage = ({ location }) => (
+  <Layout location={location}>
     <TitleSection Pattern={PatternYellow} title="Membership" theme="gold" />
     {/* TODO: perks section */}
     <TextSection Pattern={PatternYellow} {...section} index={0} />

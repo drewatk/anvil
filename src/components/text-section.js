@@ -17,8 +17,6 @@ const TextSectionWithPicture = ({
     .join(" ")
     .trim();
 
-  console.log(imageFluid);
-
   return (
     <div className={sectionClasses}>
       <div className="container">
