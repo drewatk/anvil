@@ -16,11 +16,13 @@
     padding: 20px;
   }
 
-  .left-triangle, .right-triangle {
+  .left-triangle,
+  .right-triangle {
     display: none;
   }
 
-  .left-content, .right-content {
+  .left-content,
+  .right-content {
     width: 100%;
     min-height: 200px;
 
@@ -28,8 +30,6 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-
-    font-size: 0.8rem;
 
     padding: 10px 30px;
 
@@ -39,18 +39,29 @@
     }
 
     text-align: center;
+
+    h4 {
+      font-size: 2rem;
+      font-weight: $font-weight-semibold;
+      font-family: $headings-font-family;
+    }
+    h5,
+    h6 {
+      font-weight: $font-weight-normal;
+      font-family: $headings-font-family;
+    }
   }
 
   .left-content {
     background: $grey;
     color: $white;
-    filter: drop-shadow(1px 2px 2px rgba(0,0,0,.7));
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.7));
   }
 
   .right-content {
     background: $white;
     color: $grey;
-    filter: drop-shadow(-2px 2px 4px rgba(0,0,0,.7));
+    filter: drop-shadow(-2px 2px 4px rgba(0, 0, 0, 0.7));
   }
 
   .logo {
@@ -67,7 +78,6 @@
       line-height: 1.5rem;
     }
   }
-
 }
 
 @include media-breakpoint-up(md) {
@@ -99,7 +109,7 @@
       border-right: #{$tri_side} solid transparent;
       top: 0;
       left: 0;
-      filter: drop-shadow(1px 2px 2px rgba(0,0,0,.7));
+      filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.7));
     }
 
     .right-triangle {
@@ -107,7 +117,7 @@
       border-left: #{$tri_side} solid transparent;
       bottom: 0;
       right: 0;
-      filter: drop-shadow(-2px 2px 4px rgba(0,0,0,.5));
+      filter: drop-shadow(-2px 2px 4px rgba(0, 0, 0, 0.5));
     }
 
     .left-content,
@@ -122,14 +132,14 @@
       flex-direction: column;
       filter: drop-shadow(0 0 0);
     }
-  
+
     .left-content {
       top: 0;
       left: 0;
       align-items: flex-start;
       text-align: left;
     }
-  
+
     .right-content {
       bottom: 0;
       right: 0;
@@ -150,7 +160,7 @@
 
     .logo {
       height: 70px;
-    } 
+    }
 
     .left-triangle {
       border-top: #{$tri_side} solid $grey;

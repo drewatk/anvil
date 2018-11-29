@@ -1,0 +1,14 @@
+@import "../stylesheets/variables.scss";
+
+.perks {
+  :global(.row) {
+    min-height: $section-height;
+
+    :global(.col) {
+      text-align: center;
+      h5 {
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+}

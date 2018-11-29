@@ -17,11 +17,12 @@ const EventsPage = ({ data, location }) => {
     imageFluid: data.imageOne.childImageSharp.fluid
   };
   const section2 = {
-    title: "Section 2",
-    subheading: "Lorem ispum blah blah blah",
+    title: "Crossing State Street",
+    subheading: "Purdue's First Social Entrepreneurship Competition",
     paragraphs: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus auctor vestibulum. Ut efficitur scelerisque sagittis. Aliquam dignissim fringilla laoreet. Sed auctor erat id erat fermentum eleifend. Nam arcu magna, egestas nec sem a, ultrices fringilla augue. Praesent ac feugiat ex, at vulputate diam. Maecenas vel hendrerit lorem, ac faucibus sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis dolor imperdiet, blandit ex in, congue risus."
-    ]
+    ],
+    imageFluid: data.imageTwo.childImageSharp.fluid
   };
 
   const textSections = [section1, section2];
@@ -45,6 +46,13 @@ export default EventsPage;
 export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "img/boiler.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageTwo: file(relativePath: { eq: "img/shobe.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

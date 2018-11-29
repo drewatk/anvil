@@ -1,14 +1,6 @@
 import React from "react";
 import { Link, withPrefix } from "gatsby";
-import {
-  Nav,
-  NavLink,
-  NavItem,
-  NavbarBrand,
-  Navbar,
-  NavbarToggler,
-  Collapse
-} from "reactstrap";
+import { Nav, NavItem, Navbar, NavbarToggler, Collapse } from "reactstrap";
 
 import styles from "./navbar.module.scss";
 import Logo from "../assets/anvil.svg";
@@ -35,6 +27,7 @@ class SiteNavbar extends React.Component {
     const navbarClasses = [
       styles.navbar,
       location.pathname === withPrefix("/membership") ? styles.navbarGold : "",
+      location.pathname === withPrefix("/about") ? styles.navbarGold : "",
       location.pathname === withPrefix("/events") ? styles.navbarBlue : "",
       location.pathname === withPrefix("/sponsor") ? styles.navbarGreen : ""
     ]

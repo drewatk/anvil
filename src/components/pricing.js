@@ -3,22 +3,18 @@ import React from "react";
 import styles from "./pricing.module.scss";
 
 import Logo from "../assets/anvil.svg";
-import emailIcon from "../assets/icons8-email.png";
-import facebookIcon from "../assets/icons8-facebook.png";
 
 const Pricing = () => (
   <div className={styles.section}>
     <div className={styles.leftTriangle} />
 
     <div className={styles.leftContent}>
-      <h5>Students</h5>
+      <h5 className="text-uppercase">Students</h5>
       <div className={styles.price}>
-        <h4>
-          <bold>$10</bold>
-        </h4>
-        <h6>Per Month</h6>
+        <h4 className="text-uppercase">$10</h4>
+        <h6 className="text-uppercase">Per Month</h6>
       </div>
-      <h5>
+      <h5 className="text-uppercase">
         <a
           className={styles.joinLink}
           href="https://anvilstartups1.typeform.com/to/Qx3fl2"
@@ -35,7 +31,7 @@ const Pricing = () => (
     <div className={styles.rightTriangle} />
 
     <div className={styles.rightContent}>
-      <h5>
+      <h5 className="text-uppercase">
         <a
           className={styles.joinLink}
           href="https://anvilstartups1.typeform.com/to/Qx3fl2"
@@ -44,12 +40,10 @@ const Pricing = () => (
         </a>
       </h5>
       <div className={styles.price}>
-        <h4>
-          <bold>$30</bold>
-        </h4>
-        <h6>Per Month</h6>
+        <h4 className="text-uppercase">$30</h4>
+        <h6 className="text-uppercase">Per Month</h6>
       </div>
-      <h5>Non-Students</h5>
+      <h5 className="text-uppercase">Non-Students</h5>
     </div>
   </div>
 );
