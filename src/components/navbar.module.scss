@@ -1,100 +1,128 @@
 @import "../stylesheets/variables";
 
 .navbar {
-  display: flex;
-  align-items: center;
-  height: $navbar-height;
-  padding: 0 2.5rem;
+  :global(.navbar) {
+    height: $navbar-height;
+    background-color: $white;
 
-  a:hover {
-    text-decoration: none;
-  }
+    :global(.collapse) {
+      background-color: $white;
 
-  .brand {
-    display: flex;
-    align-items: center;
+      :global(.navbar-nav) {
+        :global(.nav-item) {
+          font-family: $headings-font-family;
+          font-size: 0.875rem;
+          letter-spacing: 0.0625rem;
+        }
 
-    &-logo {
-      height: 1.5rem;
-      padding-right: 0.625rem;
+        :global(.nav-link) {
+          padding-left: 1.5625rem;
+          padding-right: 1.5625rem;
+          color: $blue;
+        }
 
-      :global(.anvil-logo-path) {
-        fill: $anvil-gold;
+        :global(.nav-link:hover) {
+          color: darken($blue, 50%); // TODO: this needs to be more visible
+        }
       }
     }
 
-    &-name {
+    :global(.navbar-brand) {
       font-size: 1.125rem;
       margin: 0;
       font-weight: $font-weight-semibold;
       color: $blue;
-    }
-  }
 
-  // TODO: custom classes here
-  :global(.nav) {
-    margin-left: calc(100px - 1.5625rem);
+      .logo {
+        padding-right: 0.625rem;
 
-    :global(.nav-item) {
-      font-family: $headings-font-family;
-      font-size: 0.875rem;
-      letter-spacing: 0.0625rem;
-    }
-
-    :global(.nav-link) {
-      padding-left: 1.5625rem;
-      padding-right: 1.5625rem;
-      color: $blue;
-    }
-
-    :global(.nav-link:hover) {
-      color: darken($blue, 50%); // TODO: this needs to be more visible
+        :global(.anvil-logo-path) {
+          fill: $anvil-gold;
+        }
+      }
     }
   }
 }
 
 .navbar-gold {
-  background: $anvil-gold;
-  .brand {
-    &-logo {
-      :global(.anvil-logo-path) {
-        fill: $black;
+  :global(.navbar) {
+    background-color: $anvil-gold;
+
+    :global(.collapse) {
+      background-color: rgba($anvil-gold, 0);
+
+      :global(.navbar-nav) {
+        :global(.nav-link) {
+          color: $black;
+        }
+        :global(.nav-link:hover) {
+          color: $blue;
+        }
       }
     }
-    &-name {
-      color: $black;
-    }
-  }
 
-  :global(.nav) {
-    :global(.nav-link) {
+    :global(.navbar-brand) {
       color: $black;
-    }
-    :global(.nav-link:hover) {
-      color: $blue;
+      .logo {
+        :global(.anvil-logo-path) {
+          fill: $black;
+        }
+      }
     }
   }
 }
 
 .navbar-blue {
-  background: $blue;
-  .brand {
-    &-logo {
-      :global(.anvil-logo-path) {
-        fill: $white;
+  :global(.navbar) {
+    background-color: $blue;
+
+    :global(.collapse) {
+      background-color: rgba($blue, 0);
+
+      :global(.navbar-nav) {
+        :global(.nav-link) {
+          color: $white;
+        }
+        :global(.nav-link:hover) {
+          color: darken($white, 25%);
+        }
       }
     }
-    &-name {
+    :global(.navbar-brand) {
       color: $white;
+      .logo {
+        :global(.anvil-logo-path) {
+          fill: $white;
+        }
+      }
     }
   }
+}
 
-  :global(.nav) {
-    :global(.nav-link) {
-      color: $white;
+.navbar-green {
+  :global(.navbar) {
+    background-color: $green;
+
+    :global(.collapse) {
+      background-color: rgba($green, 0);
+
+      :global(.navbar-nav) {
+        :global(.nav-link) {
+          color: $white;
+        }
+        :global(.nav-link:hover) {
+          color: darken($white, 25%);
+        }
+      }
     }
-    :global(.nav-link:hover) {
-      color: darken($white, 25%);
+
+    :global(.navbar-brand) {
+      color: $white;
+      .logo {
+        :global(.anvil-logo-path) {
+          fill: $white;
+        }
+      }
     }
   }
 }

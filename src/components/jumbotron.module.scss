@@ -3,6 +3,8 @@
 
 .section {
   height: calc(100vh - #{$section-height} - #{$navbar-height});
+  min-height: $section-height;
+  max-height: calc(#{$section-height} * 2.5);
   display: flex;
   align-items: center;
 

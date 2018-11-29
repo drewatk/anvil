@@ -6,7 +6,8 @@ const TitleSection = ({ title, theme, Pattern }) => {
   const sectionClasses = [
     styles.section,
     theme === "blue" ? styles.sectionBlue : "",
-    theme === "gold" ? styles.sectionGold : ""
+    theme === "gold" ? styles.sectionGold : "",
+    theme === "green" ? styles.sectionGreen : ""
   ]
     .join(" ")
     .trim();

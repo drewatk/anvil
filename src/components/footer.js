@@ -5,6 +5,7 @@ import styles from "./footer.module.scss";
 import Logo from "../assets/anvil.svg";
 import emailIcon from "../assets/icons8-email.png";
 import facebookIcon from "../assets/icons8-facebook.png";
+import instagramIcon from "../assets/icons8-instagram_new.png";
 
 const Footer = () => (
   <div className={styles.section}>
@@ -33,6 +34,13 @@ const Footer = () => (
                 className={styles.socialIcon}
                 src={facebookIcon}
                 alt="The Anvil on Facebook"
+              />
+            </a>
+            <a href="https://www.instagram.com/anvilstartups">
+              <img
+                className={styles.socialIcon}
+                src={instagramIcon}
+                alt="The Anvil on Instagram"
               />
             </a>
           </div>

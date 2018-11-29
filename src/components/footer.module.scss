@@ -11,7 +11,7 @@
 
 .footer {
   height: $section-height;
-  padding: 3.125rem 5rem 1.875rem 5rem;
+  padding: 3.125rem $horizontal-padding 1.875rem $horizontal-padding;
   color: $white;
   display: flex;
   flex-direction: column;

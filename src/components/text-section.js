@@ -19,7 +19,7 @@ const TextSectionWithPicture = ({
 
   return (
     <div className={sectionClasses}>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className={imageFluid ? "col-md-7" : "col-12"}>
             <Pattern
