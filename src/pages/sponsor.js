@@ -39,7 +39,7 @@ const EventsPage = ({ data, location }) => {
         </>
       ],
       imageFluid: data.boilerImage.childImageSharp.fluid,
-      alt: "Cryptoleague pitching at Demo Day 2018"
+      alt: "Cryptoleague giving their final pitch at Demo Day 2018"
     },
     {
       title: "Sponsor The Anvil",

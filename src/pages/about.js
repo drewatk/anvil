@@ -47,8 +47,8 @@ const AboutPage = ({ data, location }) => {
       paragraphs: [
         <>
           We are a 501(c)(3) nonprofit organization, funded through donations
-          through our community. If you're interested in sponosoring us so we
-          can continue our work please see our{" "}
+          through our community. If you're interested in sponsoring us so we can
+          continue our work please see our{" "}
           <Link to="/sponsor">sponsorshop page here</Link>.
         </>,
         <>
