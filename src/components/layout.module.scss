@@ -9,7 +9,7 @@
   }
 
   .yellow-square {
-    position: absolute;
+    position: fixed;
     z-index: 30;
     width: 60px;
     height: 222px;
@@ -21,7 +21,7 @@
   }
 
   .blue-square {
-    position: absolute;
+    position: fixed;
     z-index: 31;
     right: calc(-255px + 60px);
     width: 255px;
@@ -31,10 +31,14 @@
 
     top: 0;
     right: 0;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   .green-square {
-    position: absolute;
+    position: fixed;
     z-index: 31;
     width: 113px;
     height: 60px;
@@ -43,5 +47,9 @@
 
     top: 0;
     right: 255px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
   }
 }

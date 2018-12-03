@@ -31,6 +31,10 @@ $pattern-offset: -3rem;
       align-items: center;
     }
 
+    :global(.col-md-7) {
+      padding: 0 1.875rem;
+    }
+
     .pattern {
       position: absolute;
       left: $pattern-offset; // TODO: somtimes puts it off screen

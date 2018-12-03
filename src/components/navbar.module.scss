@@ -35,7 +35,7 @@
       color: $blue;
 
       .logo {
-        padding-right: 0.625rem;
+        margin: 0 1.5625rem;
 
         :global(.anvil-logo-path) {
           fill: $anvil-gold;
