@@ -9,7 +9,8 @@ const TextSectionWithPicture = ({
   paragraphs,
   index,
   imageFluid,
-  Pattern
+  Pattern,
+  alt
 }) => {
   index = index ? index : 0;
 
@@ -34,7 +35,13 @@ const TextSectionWithPicture = ({
               })}
           </div>
           <div className={imageFluid ? "col-md-5" : ""}>
-            {imageFluid && <Img fluid={imageFluid} style={{ width: "100%" }} />}
+            {imageFluid && (
+              <Img
+                fluid={imageFluid}
+                style={{ width: "100%" }}
+                alt={alt ? alt : ""}
+              />
+            )}
           </div>
         </div>
       </div>

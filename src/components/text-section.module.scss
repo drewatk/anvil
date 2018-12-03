@@ -5,6 +5,7 @@ $pattern-offset: -3rem;
 
 .section {
   :global(.container-fluid) {
+    max-width: 90rem;
     padding-top: 3.125rem; // TODO: padding variable
     padding-bottom: 3.125rem;
 

@@ -1,0 +1,14 @@
+{
+  "search.exclude": {
+    ".git": true,
+    ".eslintcache": true,
+    "public": true,
+    ".cache": true,
+    "node_modules": true,
+    "npm-debug.log.*": true,
+    "yarn.lock": true,
+    "yarn-error.log": true
+  },
+  "eslint.enable": true,
+  "editor.formatOnSave": true
+}
