@@ -62,7 +62,7 @@ const AboutPage = ({ data, location }) => {
     }
   ];
   return (
-    <Layout location={location}>
+    <Layout location={location} pageTitle="About">
       <TitleSection
         Pattern={PatternYellow}
         title="About the Anvil"

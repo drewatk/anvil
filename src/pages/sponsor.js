@@ -62,7 +62,7 @@ const EventsPage = ({ data, location }) => {
   ];
 
   return (
-    <Layout location={location}>
+    <Layout location={location} pageTite="Sponsorship">
       <TitleSection Pattern={PatternGreen} title="Sponsor" theme="green" />
       {sections.map((section, index) => (
         <TextSection

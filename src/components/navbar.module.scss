@@ -23,7 +23,7 @@
         }
 
         :global(.nav-link:hover) {
-          color: darken($blue, 50%); // TODO: this needs to be more visible
+          color: darken($blue, 50%);
         }
       }
     }
@@ -41,6 +41,10 @@
           fill: $anvil-gold;
         }
       }
+    }
+
+    :global(.navbar-brand:hover) {
+      color: darken($blue, 50%);
     }
   }
 }
@@ -68,6 +72,16 @@
       .logo {
         :global(.anvil-logo-path) {
           fill: $black;
+        }
+      }
+    }
+
+    :global(.navbar-brand:hover) {
+      color: $blue;
+
+      .logo {
+        :global(.anvil-logo-path) {
+          fill: $blue;
         }
       }
     }
@@ -99,6 +113,16 @@
         }
       }
     }
+
+    :global(.navbar-brand:hover) {
+      color: darken($white, 25%);
+
+      .logo {
+        :global(.anvil-logo-path) {
+          fill: darken($white, 25%);
+        }
+      }
+    }
   }
 }
 
@@ -125,6 +149,16 @@
       .logo {
         :global(.anvil-logo-path) {
           fill: $white;
+        }
+      }
+    }
+
+    :global(.navbar-brand:hover) {
+      color: darken($white, 25%);
+
+      .logo {
+        :global(.anvil-logo-path) {
+          fill: darken($white, 25%);
         }
       }
     }

@@ -38,7 +38,7 @@ const EventsPage = ({ data, location }) => {
   ];
 
   return (
-    <Layout location={location}>
+    <Layout location={location} pageTitle="Events">
       <TitleSection Pattern={PatternBlue} title="Events" theme="blue" />
       {sections.map((section, index) => (
         <TextSection

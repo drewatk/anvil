@@ -13,7 +13,7 @@ import favicon from "../assets/favicon.ico";
 
 import styles from "./layout.module.scss";
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children, location, pageTitle }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -28,7 +28,11 @@ const Layout = ({ children, location }) => (
     render={data => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={
+            pageTitle
+              ? `${data.site.siteMetadata.title} - ${pageTitle}`
+              : data.site.siteMetadata.title
+          }
           meta={[
             {
               name: "description",

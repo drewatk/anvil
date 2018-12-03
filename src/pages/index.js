@@ -6,7 +6,10 @@ import Squares from "../components/squares";
 
 const IndexPage = ({ location }) => {
   return (
-    <Layout location={location}>
+    <Layout
+      location={location}
+      pageTitle="Purdue's Student Entrepreneurship Hub"
+    >
       <Jumbotron />
       <Squares />
     </Layout>

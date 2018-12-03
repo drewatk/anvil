@@ -20,7 +20,7 @@ const sections = [
 ];
 
 const MembershipPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout location={location} pageTitle="Membership">
     <TitleSection Pattern={PatternYellow} title="Membership" theme="gold" />
 
     <TextSection Pattern={PatternYellow} {...sections[0]} index={0} />

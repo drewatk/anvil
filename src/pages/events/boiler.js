@@ -17,7 +17,7 @@ const BoilerPage = ({ data, location }) => {
   ];
 
   return (
-    <Layout location={location}>
+    <Layout location={location} pageTitle="The Boiler">
       {/* <TitleSection Pattern={PatternBlue} title="Events" theme="blue" />
       {textSections.map((section, index) => (
         <TextSection
