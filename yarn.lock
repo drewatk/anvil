@@ -5357,6 +5357,11 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-gtag@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.4.tgz#9aa8e44e842a26903f26dd76c6097fbf85670cf2"
+  integrity sha512-QmFv0Rm5ZfAIXtI4MZwHJ7M7x6f0/ZzCvNnRZDReCUSCwwSx44oKe0GjJwBJ/Z9DRLmPjfs0zRvvkQFKNRtDRg==
+
 gatsby-plugin-manifest@^2.0.10:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.10.tgz#53e5825a27da6fc0ba44143bd275213e3c38867e"

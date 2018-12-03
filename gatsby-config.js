@@ -34,6 +34,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-react-svg"
+    "gatsby-plugin-react-svg",
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: "UA-130293321-1",
+        head: true
+      }
+    }
   ]
 };
