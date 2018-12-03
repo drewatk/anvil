@@ -45,6 +45,12 @@ const Footer = () => (
             </a>
           </div>
         </div>
+        <div>
+          <p className={styles.copyright}>
+            Copyright &copy; 2018 The Anvil Inc. Icons designed by{" "}
+            <a href="https://icons8.com/">Icons8</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
