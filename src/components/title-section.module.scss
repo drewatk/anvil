@@ -5,14 +5,21 @@
   height: 20rem;
   display: flex;
   align-items: center;
+  position: relative;
 
   .title {
     margin: 0 auto;
+    padding-left: 10px;
     @include page-title-type;
   }
 
   .pattern {
     align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 150px;
+    width: 150px;
   }
 }
 
