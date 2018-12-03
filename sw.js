@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c34b1f5a7d773a40e2ca.js"
+    "url": "webpack-runtime-50e82d27f23f69689e13.js"
   },
   {
-    "url": "app-38ca25080198e5a3a215.js"
+    "url": "app-d587a049cab547ce79b4.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-8d11bc7128dad10f2366.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9cbc312db34fc9da7c64dae0faac31f6"
+    "revision": "ca3df9febd58de4549530254d9dbbcfa"
   },
   {
-    "url": "0.6e39660dbd8156ebaca9.css"
+    "url": "0.687dc86a9af63162362e.css"
   },
   {
     "url": "1.3a73e5e31bcf3a0183e0.css"
@@ -51,7 +51,7 @@ self.__precacheManifest = [
     "url": "component---src-pages-404-js-9c9b4f6f693984f54ed7.js"
   },
   {
-    "url": "0-d7d39ef4c99c787097df.js"
+    "url": "0-e75ac6f982fd7d1d3e00.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -90,7 +90,7 @@ var navigationRoute = new workbox.routing.NavigationRoute(function (_ref) {
 
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      var offlineShell = "/anvil/offline-plugin-app-shell-fallback/index.html";
+      var offlineShell = "/offline-plugin-app-shell-fallback/index.html";
       var cacheName = workbox.core.cacheNames.precache;
       return caches.match(offlineShell, {
         cacheName: cacheName
@@ -147,7 +147,7 @@ var messageApi = {
           includesPrefix = _ref3.includesPrefix;
 
       if (!includesPrefix) {
-        return "/anvil" + pathname;
+        return "" + pathname;
       } else {
         return pathname;
       }
