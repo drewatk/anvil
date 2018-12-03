@@ -28,7 +28,9 @@ class SiteNavbar extends React.Component {
       styles.navbar,
       location.pathname === withPrefix("/membership") ? styles.navbarGold : "",
       location.pathname === withPrefix("/about") ? styles.navbarGold : "",
-      location.pathname === withPrefix("/events") ? styles.navbarBlue : "",
+      location.pathname.startsWith(withPrefix("/events"))
+        ? styles.navbarBlue
+        : "",
       location.pathname === withPrefix("/sponsor") ? styles.navbarGreen : ""
     ]
       .join(" ")
