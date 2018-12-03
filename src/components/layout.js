@@ -34,7 +34,11 @@ const Layout = ({ children, location }) => (
               name: "description",
               content: data.site.siteMetadata.description
             },
-            { name: "keywords", content: "sample, something" }
+            {
+              name: "keywords",
+              content:
+                "Purdue University, Startups, Entrepreneurship, Technology, Co-working, coworking"
+            }
           ]}
           link={[
             { rel: "shortcut icon", type: "image/png", href: `${favicon}` }

@@ -31,7 +31,11 @@ const TextSectionWithPicture = ({
             <h4 className={styles.subheading}>{subheading}</h4>
             {paragraphs &&
               paragraphs.map((para, index) => {
-                return <p key={index}>{para}</p>;
+                return (
+                  <p className={styles.text} key={index}>
+                    {para}
+                  </p>
+                );
               })}
           </div>
           <div className={imageFluid ? "col-md-5" : ""}>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "The Anvil",
-    description: "Description"
+    description: "Purdue's Student Entrepreneurship Hub"
   },
   pathPrefix: "/anvil",
   plugins: [

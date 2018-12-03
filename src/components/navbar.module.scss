@@ -5,7 +5,8 @@
     height: $navbar-height;
     background-color: $white;
 
-    :global(.collapse) {
+    :global(.collapse),
+    :global(.collapsing) {
       background-color: $white;
 
       :global(.navbar-nav) {
@@ -48,7 +49,8 @@
   :global(.navbar) {
     background-color: $anvil-gold;
 
-    :global(.collapse) {
+    :global(.collapse),
+    :global(.collapsing) {
       background-color: rgba($anvil-gold, 0);
 
       :global(.navbar-nav) {
@@ -76,7 +78,8 @@
   :global(.navbar) {
     background-color: $blue;
 
-    :global(.collapse) {
+    :global(.collapse),
+    :global(.collapsing) {
       background-color: rgba($blue, 0);
 
       :global(.navbar-nav) {
@@ -103,7 +106,8 @@
   :global(.navbar) {
     background-color: $green;
 
-    :global(.collapse) {
+    :global(.collapse),
+    :global(.collapsing) {
       background-color: rgba($green, 0);
 
       :global(.navbar-nav) {

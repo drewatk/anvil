@@ -45,9 +45,9 @@ const EventsPage = ({ data, location }) => {
       title: "Sponsor The Anvil",
       paragraphs: [
         <>
-          We're also always looking for support to keep building our community
+          We're always looking for support to keep building our community
           through events, outreach, and our coworking space. If you'd like to
-          Sponsor The Anvil, you can refer to our{" "}
+          sponsor The Anvil, you can refer to our{" "}
           <a
             href={data.anvilPacket.publicURL}
             target="_blank"
