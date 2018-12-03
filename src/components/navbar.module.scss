@@ -8,6 +8,7 @@
     :global(.collapse),
     :global(.collapsing) {
       background-color: $white;
+      z-index: 20;
 
       :global(.navbar-nav) {
         :global(.nav-item) {
@@ -45,6 +46,10 @@
 
     :global(.navbar-brand:hover) {
       color: darken($blue, 50%);
+    }
+
+    :global(.navbar-toggler) {
+      border: none;
     }
   }
 }
