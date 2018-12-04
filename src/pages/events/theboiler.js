@@ -28,6 +28,16 @@ const TheBoilerPage = ({ data, location }) => {
           <a href="https://anvilstartups1.typeform.com/to/JCALAB">
             <Button color="primary">Apply Now</Button>
           </a>
+        </>,
+        <>
+          Missed our callout? See the slides here:{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/presentation/d/1m2KJyrcxW8nprI1naKf1lgdGYcrrIeQpg8wK1vFAhH0/edit?usp=sharing"
+          >
+            Callout Slides
+          </a>
         </>
       ]
     },

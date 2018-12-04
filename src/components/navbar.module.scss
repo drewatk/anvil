@@ -31,12 +31,12 @@
 
     :global(.navbar-brand) {
       font-size: 1.125rem;
-      margin: 0;
+      margin: 0 1.5625rem 0 0.3125rem;
       font-weight: $font-weight-semibold;
       color: $blue;
 
       .logo {
-        margin: 0 1.5625rem;
+        margin: 0 0.8rem;
 
         :global(.anvil-logo-path) {
           fill: $anvil-gold;
@@ -128,6 +128,12 @@
         }
       }
     }
+
+    :global(.navbar-toggler) {
+      :global(.navbar-toggler-icon) {
+        filter: invert(100%);
+      }
+    }
   }
 }
 
@@ -165,6 +171,12 @@
         :global(.anvil-logo-path) {
           fill: darken($white, 25%);
         }
+      }
+    }
+
+    :global(.navbar-toggler) {
+      :global(.navbar-toggler-icon) {
+        filter: invert(100%);
       }
     }
   }

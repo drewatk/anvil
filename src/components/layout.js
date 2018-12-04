@@ -8,6 +8,7 @@ import Footer from "./footer";
 import "../stylesheets/index.scss";
 import "typeface-open-sans";
 import "typeface-poppins";
+// import "typeface-work-sans"
 
 import favicon from "../assets/favicon.ico";
 

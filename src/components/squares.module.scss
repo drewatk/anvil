@@ -8,7 +8,6 @@
     padding-right: 0;
 
     :global(.row) {
-      height: $section-height; // TODO: ask ryan about dimensions
       margin: 0;
 
       a {
@@ -20,7 +19,9 @@
         padding-left: 0;
       }
 
-      @media (min-width: 768px) {
+      @include media-breakpoint-up(md) {
+        height: $section-height;
+
         .col-left {
           flex: 0 0 44%;
           max-width: 44%;
@@ -37,24 +38,46 @@
         display: flex;
         justify-content: flex-end;
 
+        @include media-breakpoint-down(sm) {
+          height: 9.375rem;
+        }
+
         &-heading {
           position: absolute;
           left: 0;
           top: 0;
           margin: 0;
           padding-top: 2.8125rem;
-          padding-left: 3.75rem; // TODO: ask ryan about dimensions
+          padding-left: 3.75rem;
 
           @include heading-type;
+
+          @include media-breakpoint-down(md) {
+            font-size: 1.6rem;
+            padding-left: 2.75;
+          }
+
           @include media-breakpoint-down(sm) {
-            font-size: 1.75rem;
-            padding-top: 3.82rem;
+            padding-top: 0;
+            position: relative;
+            margin-right: auto;
+            align-self: center;
           }
         }
 
         .pattern {
           align-self: flex-end;
           flex-shrink: 0;
+
+          @include media-breakpoint-down(md) {
+            height: 6.25rem;
+            width: 6.25rem;
+          }
+
+          @include media-breakpoint-down(sm) {
+            height: 4.6875;
+            width: 4.6875;
+          }
         }
       }
 

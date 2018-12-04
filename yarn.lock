@@ -11857,6 +11857,11 @@ typeface-poppins@^0.0.54:
   resolved "https://registry.yarnpkg.com/typeface-poppins/-/typeface-poppins-0.0.54.tgz#58c90da107a14db1e359f4d339cb2cc8e098d37b"
   integrity sha512-VQyXtQJdr4jxHIyZWR6SkBjkqf5opHF4cx5C7A48mfL60ahYLN2fGtsN9qAgJ6YyRvOLpDn64czfn+/tWwSE/g==
 
+typeface-work-sans@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-work-sans/-/typeface-work-sans-0.0.54.tgz#1bf57d6a2c7dfa6f820adbe12d8c2291835f07c4"
+  integrity sha512-pWSD7euQ6WeS1OLoefKSY5s6kmiJmd9udLpXWvzYmx4jahLJoxoExzdD6qcOZuOYhpW+dB5BP0ydmHg46ODa5g==
+
 ua-parser-js@^0.7.18:
   version "0.7.19"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
