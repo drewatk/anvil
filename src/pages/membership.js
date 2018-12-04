@@ -11,16 +11,20 @@ import PatternYellow from "../assets/pattern_yellow.svg";
 const sections = [
   {
     title: "The Perks",
-    subheading: "We'll handle the small stuff, so you can keep innovating."
+    subheading:
+      "A full-featured coworking space. We'll handle the small stuff, so you can keep innovating."
   },
   {
     title: "Pricing",
-    subheading: "We'd Love for you to join our community"
+    subheading: "We'd Love for you to join our community:"
   }
 ];
 
 const MembershipPage = ({ location }) => (
-  <Layout location={location} pageTitle="Membership">
+  <Layout
+    location={location}
+    pageTitle="Coworking Membership in West Lafayette, IN"
+  >
     <TitleSection Pattern={PatternYellow} title="Membership" theme="gold" />
 
     <TextSection Pattern={PatternYellow} {...sections[0]} index={0} />
