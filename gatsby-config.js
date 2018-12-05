@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "The Anvil",
     description:
-      "The Anvil is Purdue's Student Entrepreneurship Hub and coworking space. Create your next startup, build a new product, and network with Purdue University's student startup community."
+      "The Anvil is Purdue's Student Entrepreneurship Hub and coworking space. Create your next startup, build a new product, and network with Purdue University's student startup community.",
+    url: "https://www.anvilstartups.com"
   },
   pathPrefix: "/anvil",
   plugins: [
