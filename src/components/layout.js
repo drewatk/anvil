@@ -22,7 +22,7 @@ const Layout = ({ children, location, pageTitle }) => (
           siteMetadata {
             title
             description
-            url
+            siteUrl
           }
         }
       }
@@ -55,7 +55,7 @@ const Layout = ({ children, location, pageTitle }) => (
             },
             {
               name: `og:url`,
-              content: data.site.siteMetadata.url
+              content: data.site.siteMetadata.siteUrl
             },
             {
               name: `og:type`,
@@ -66,7 +66,7 @@ const Layout = ({ children, location, pageTitle }) => (
             { rel: "shortcut icon", type: "image/png", href: `${favicon}` }
           ]}
         >
-          <link rel="canonical" href={data.site.siteMetadata.url} />
+          <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
           <html lang="en" />
         </Helmet>
 
