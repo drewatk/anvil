@@ -8,9 +8,6 @@ import Footer from "./footer";
 import "../stylesheets/index.scss";
 import "typeface-open-sans";
 import "typeface-poppins";
-// import "typeface-work-sans"
-
-import favicon from "../assets/favicon.ico";
 
 import styles from "./layout.module.scss";
 
@@ -61,9 +58,6 @@ const Layout = ({ children, location, pageTitle }) => (
               name: `og:type`,
               content: "website"
             }
-          ]}
-          link={[
-            { rel: "shortcut icon", type: "image/png", href: `${favicon}` }
           ]}
         >
           <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
