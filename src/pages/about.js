@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import TitleSection from "../components/title-section";
 import TextSection from "../components/text-section";
+// import Ventures from "../components/ventures";
 
 import PatternYellow from "../assets/pattern_yellow.svg";
 
@@ -20,7 +21,7 @@ const AboutPage = ({ data, location }) => {
     },
     {
       title: "Where are we?",
-      subheading: 'The "Church of Entrepreneurship"',
+      subheading: 'The "Chapel of Entrepreneurship"',
       paragraphs: [
         <>
           One year after we founded, we took over the old University Church at{" "}
@@ -42,7 +43,7 @@ const AboutPage = ({ data, location }) => {
       imageFluid: data.imageTwo.childImageSharp.fluid
     },
     {
-      title: "Intrested in our mission?",
+      title: "Interested in our mission?",
       subheading: "We are supported by our community",
       paragraphs: [
         <>
@@ -76,6 +77,7 @@ const AboutPage = ({ data, location }) => {
           key={index}
         />
       ))}
+      {/* <Ventures Pattern={PatternYellow} index={3} /> */}
     </Layout>
   );
 };
