@@ -1,0 +1,40 @@
+@import "../stylesheets/variables.scss";
+@import "../stylesheets/mixins.scss";
+
+$pattern-offset: -3rem;
+
+.section {
+  :global(.container-fluid) {
+    max-width: 90rem;
+    padding-top: 3.125rem; // TODO: padding variable
+    padding-bottom: 3.125rem;
+
+    @include media-breakpoint-up(md) {
+      padding-left: calc(#{$horizontal-padding} - #{$pattern-offset});
+      padding-right: $horizontal-padding;
+    }
+
+    .title {
+      @include heading-type;
+    }
+
+    .subheading {
+      @include subheading-type;
+    }
+
+    .pattern {
+      position: absolute;
+      left: $pattern-offset; // TODO: somtimes puts it off screen
+      height: 3rem;
+      width: 3rem;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+}
+
+.section-grey {
+  background-color: $light-grey;
+}
