@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import { Button } from "reactstrap";
 
 import Layout from "../components/layout";
 import TitleSection from "../components/title-section";
@@ -44,13 +45,22 @@ const AboutPage = ({ data, location }) => {
     },
     {
       title: "Interested in our mission?",
-      subheading: "We are supported by our community",
+      subheading: "Help us or Join Our Team",
       paragraphs: [
         <>
           We are a 501(c)(3) nonprofit organization, funded through donations
           through our community. If you're interested in sponsoring us so we can
-          continue our work please see our{" "}
+          continue our work please see our
           <Link to="/sponsor">sponsorshop page here</Link>.
+        </>,
+        <>
+          If you'd like to help by getting involved in our executive board, fill
+          out the following form, and one of our team members will get in touch.
+        </>,
+        <>
+          <a href="http://bit.ly/AnvilExecTeam">
+            <Button>Join Our Team</Button>
+          </a>
         </>,
         <>
           Feel free to contact us any time at{" "}

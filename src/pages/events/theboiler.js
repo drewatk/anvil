@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "reactstrap";
 import { graphql } from "gatsby";
 
 import Layout from "../../components/layout";
@@ -11,36 +10,24 @@ import PatternBlue from "../../assets/pattern_blue.svg";
 const TheBoilerPage = ({ data, location }) => {
   const sections = [
     {
-      title: "Applications are Open!",
-      subheading: "Apply now to join our 2019 cohort",
+      title: "Demo Day 2019",
+      subheading:
+        "Mark your calandars for a showcase of Purdue Student Entrepreneurship",
+      imageFluid: data.imageThree.childImageSharp.fluid,
+      alt: "Last year's Demo Day",
       paragraphs: [
         <>
-          The Boiler is a twelve-week startup accelerator program and
-          competition hosted by The Anvil and open to Purdue students and alumni
-          from the past two years.
-        </>,
-        <>
-          You can apply to The Boiler today! Fill out the application below, and
-          The Boiler team will get in touch soon. Applications are open until
-          January 18.
-        </>,
-        <>
-          <a href="https://anvilstartups1.typeform.com/to/JCALAB">
-            <Button color="primary">Apply Now</Button>
-          </a>
-        </>,
-        <>
-          Missed our callout? See the slides here:{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://docs.google.com/presentation/d/1m2KJyrcxW8nprI1naKf1lgdGYcrrIeQpg8wK1vFAhH0/edit?usp=sharing"
-          >
-            Callout Slides
-          </a>
+          The Boiler Demo Day, held on <b>April 12, 2019</b>, will be showcase
+          of our cohort's work. Each startup will present their final pitches to
+          a panel of investors, entrepreneurs, and industry experts, and will
+          have an opportunity to see detailed feedback on their pitches and
+          business plan. The audience normally consists of angel investors,
+          entrepreneurs, and more. Six judges will distribute equity-free
+          funding to each of the top 5 teams.
         </>
       ]
     },
+
     {
       title: "The Boiler History",
       subheading: "Propelling the Success of Students for Five Years Running",
@@ -96,20 +83,22 @@ const TheBoilerPage = ({ data, location }) => {
       ]
     },
     {
-      title: "Demo Day 2019",
-      subheading:
-        "Mark your calandars for a showcase of Purdue Student Entrepreneurship",
-      imageFluid: data.imageThree.childImageSharp.fluid,
-      alt: "Last year's Demo Day",
+      title: "Applications are Closed",
       paragraphs: [
         <>
-          The Boiler Demo Day, held on <b>April 20, 2019</b>, will be showcase
-          of our cohort's work. Each startup will present their final pitches to
-          a panel of investors, entrepreneurs, and industry experts, and will
-          have an opportunity to see detailed feedback on their pitches and
-          business plan. The audience normally consists of angel investors,
-          entrepreneurs, and more. Six judges will distribute equity-free
-          funding to each of the top 5 teams.
+          Applications for the 2019 cohort are currently closed. If you need
+          help getting connected with startup resources on campus, you can
+          always <a href="mailto:contact@anvilstartups.com">drop us a line</a>.
+        </>,
+        <>
+          Missed our callout? See the slides here:{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/presentation/d/1m2KJyrcxW8nprI1naKf1lgdGYcrrIeQpg8wK1vFAhH0/edit?usp=sharing"
+          >
+            Callout Slides
+          </a>
         </>
       ]
     }
