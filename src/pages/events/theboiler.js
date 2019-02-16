@@ -18,10 +18,10 @@ const TheBoilerPage = ({ data, location }) => {
       paragraphs: [
         <>
           The Boiler Demo Day, held on <b>April 12, 2019</b>, will be showcase
-          of our cohort's work. Each startup will present their final pitches to
-          a panel of investors, entrepreneurs, and industry experts, and will
-          have an opportunity to see detailed feedback on their pitches and
-          business plan. The audience normally consists of angel investors,
+          of our cohort&rsquo;s work. Each startup will present their final
+          pitches to a panel of investors, entrepreneurs, and industry experts,
+          and will have an opportunity to see detailed feedback on their pitches
+          and business plan. The audience normally consists of angel investors,
           entrepreneurs, and more. Six judges will distribute equity-free
           funding to each of the top 5 teams.
         </>

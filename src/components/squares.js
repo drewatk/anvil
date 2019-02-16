@@ -12,6 +12,13 @@ const Squares = () => (
     <div className="container-fluid">
       <div className="row">
         <div
+          tabIndex="0"
+          role="button"
+          onKeyDown={event => {
+            if (event.keycode === 13) {
+              navigate("/membership");
+            }
+          }}
           className={`${styles.square} ${styles.yellowSquare} ${
             styles.colLeft
           } col-md`}
@@ -24,6 +31,13 @@ const Squares = () => (
         </div>
 
         <div
+          tabIndex="0"
+          role="button"
+          onKeyDown={event => {
+            if (event.keycode === 13) {
+              navigate("/events");
+            }
+          }}
           className={`${styles.square} ${styles.blueSquare} ${
             styles.colRight
           } col-md`}
@@ -34,6 +48,13 @@ const Squares = () => (
         </div>
 
         <div
+          tabIndex="0"
+          role="button"
+          onKeyDown={event => {
+            if (event.keycode === 13) {
+              navigate("/sponsor");
+            }
+          }}
           className={`${styles.square} ${styles.greenSquare} ${
             styles.colRight
           } col-md`}

@@ -16,7 +16,7 @@ const EventsPage = ({ data, location }) => {
         "The longest running and most successful initiative of The Anvil, The Boiler is back for our fifth year enabling student startups in the Purdue community. The Boiler is a pre-seed accelerator with a mission of taking early stage startups from Purdue students and giving them the resources they need to succeed and generate revenue.",
         <>
           <Link to="/events/theboiler">
-            Find more about this year's program here
+            Find more about this year&rsquo;s program here
           </Link>
         </>
       ],
