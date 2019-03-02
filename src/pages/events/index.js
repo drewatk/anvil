@@ -11,27 +11,6 @@ import PatternBlue from "../../assets/pattern_blue.svg";
 const EventsPage = ({ data, location }) => {
   const sections = [
     {
-      title: "Startup Career Fair",
-      subheading: "Building a Pipeline of Purdue Talent to the Midwest",
-      paragraphs: [
-        "If you are a Purdue student who is looking for an internship or a full time job, we invite you to come out to the first annual Purdue Startup Career Fair!",
-        <>
-          Startup Career Fair is Purdue&rsquo;s first career fair that focuses
-          solely on introducing students to some of the fastest growing startups
-          in the region. We are bringing out 25+ companies in a wide variety of
-          industries with more than a 100+ opportunities available for students.
-          The career fair will be taking place{" "}
-          <b>Thursday February 28th, 2019 from 3pm to 7pm</b> at The Anvil.
-        </>,
-        "The career fair is open to students of all majors and years. If you’re looking to make an outsized impact early on in your career, this is the career fair for you!",
-        <>
-          <a href="http://startupfair.anvilstartups.com/">
-            <Button>Register Now!</Button>
-          </a>
-        </>
-      ]
-    },
-    {
       title: "The Boiler",
       subheading: "Purdue's Student Run Startup Accellerator",
       paragraphs: [
@@ -44,6 +23,30 @@ const EventsPage = ({ data, location }) => {
       ],
       imageFluid: data.imageOne.childImageSharp.fluid,
       alt: "Olivia Cane of Unibubbles wins the 4th annual Boiler Accellerator"
+    },
+    {
+      title: "Startup Career Fair",
+      subheading: "Building a Pipeline of Purdue Talent to the Midwest",
+      paragraphs: [
+        <>
+          Startup Career Fair was Purdue&rsquo;s first career fair that focuses
+          solely on introducing students to some of the fastest growing startups
+          in the region. We brought 25+ companies in a wide variety of
+          industries with more than a 100+ opportunities available for students.
+          The event was attended by over 300 students across disciplines.
+        </>,
+        <>
+          Stay tuned to{" "}
+          <a href="https://www.facebook.com/anvilstartups">our Facebook</a> for
+          photos of the event, or get in touch if you&rsquo;d like to be
+          involved in next year&rsquo;s fair.
+        </>,
+        <>
+          <a href="http://startupfair.anvilstartups.com/">
+            <Button>More Info</Button>
+          </a>
+        </>
+      ]
     },
     {
       title: "Crossing State Street",
