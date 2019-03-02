@@ -18,6 +18,7 @@ const Pricing = () => (
         <a
           className={styles.joinLink}
           href="https://anvilstartups1.typeform.com/to/Qx3fl2"
+          aria-label="Join as a student, $10 per month"
         >
           Join Now &#8594;
         </a>
@@ -35,6 +36,7 @@ const Pricing = () => (
         <a
           className={styles.joinLink}
           href="https://anvilstartups1.typeform.com/to/Qx3fl2"
+          aria-label="Join as a non-student community member, $30 per month"
         >
           Join Now &#8594;
         </a>

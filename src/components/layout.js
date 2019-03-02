@@ -65,16 +65,22 @@ const Layout = ({ children, location, pageTitle }) => (
         </Helmet>
 
         {location.pathname === withPrefix("/") ? (
-          <div className={styles.squares}>
-            <div className={styles.yellowSquare} />
-            <div className={styles.greenSquare} />
-            <div className={styles.blueSquare} />
+          <div className={styles.squares} aria-hidden="true">
+            <div className={styles.yellowSquare} aria-hidden="true" />
+            <div className={styles.greenSquare} aria-hidden="true" />
+            <div className={styles.blueSquare} aria-hidden="true" />
           </div>
         ) : null}
 
-        <Navbar location={location} />
-        <div className={styles.container}>{children}</div>
-        <Footer />
+        <header role="banner">
+          <Navbar location={location} />
+        </header>
+        <main role="main">
+          <div className={styles.container}>{children}</div>
+        </main>
+        <footer role="contentinfo">
+          <Footer />
+        </footer>
       </>
     )}
   />

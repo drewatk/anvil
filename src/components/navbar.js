@@ -44,11 +44,11 @@ class SiteNavbar extends React.Component {
               className={`${styles.logo} d-inline-block align-top`}
               height="24"
             />
-            The Anvil
+            <h1 className={styles.header}>The Anvil</h1>
           </Link>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav className="mr-auto" navbar>
+            <Nav className="mr-auto" navbar activeKey="location.pathname">
               <NavItem>
                 <Link className="nav-link" to="/about">
                   About

@@ -15,7 +15,7 @@ const Squares = () => (
           tabIndex="0"
           role="button"
           onKeyDown={event => {
-            if (event.keycode === 13) {
+            if (event.key == "Enter") {
               navigate("/membership");
             }
           }}
@@ -34,7 +34,7 @@ const Squares = () => (
           tabIndex="0"
           role="button"
           onKeyDown={event => {
-            if (event.keycode === 13) {
+            if (event.key == "Enter") {
               navigate("/events");
             }
           }}
@@ -51,7 +51,7 @@ const Squares = () => (
           tabIndex="0"
           role="button"
           onKeyDown={event => {
-            if (event.keycode === 13) {
+            if (event.key == "Enter") {
               navigate("/sponsor");
             }
           }}

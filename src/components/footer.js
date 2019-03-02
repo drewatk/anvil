@@ -16,11 +16,11 @@ const Footer = () => (
           <h1 className={styles.brandName}>The Anvil</h1>
         </div>
         <div className={styles.footerBottom}>
-          <div className={styles.address}>
+          <address className={styles.address}>
             320 North Street
             <br />
             West Lafayette, IN 47906
-          </div>
+          </address>
           <div className={styles.links}>
             <a href="mailto:contact@anvilstartups.com">
               <img
@@ -48,7 +48,10 @@ const Footer = () => (
         <div>
           <p className={styles.copyright}>
             Copyright &copy; 2018 The Anvil Inc. Icons designed by{" "}
-            <a href="https://icons8.com/">Icons8</a>
+            <a href="https://icons8.com/" className={styles.link}>
+              Icons8
+            </a>
+            .
           </p>
         </div>
       </div>
